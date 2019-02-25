@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View
+        style="@style/HorizontalHalvingLine_1"
+        android:background="@color/white_e7e7e7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white_e8e8e8" />
+    </RelativeLayout>
+
+    <View
+        style="@style/HorizontalHalvingLine_1"
+        android:background="@color/white_e8e8e8" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

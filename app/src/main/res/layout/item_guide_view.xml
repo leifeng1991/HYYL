@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_gudie_view_show"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1153" />
+
+        <TextView
+            android:id="@+id/tv_gudie_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="70"
+            android:background="@drawable/shape_rectangle_ff725c"
+            android:gravity="center"
+            android:paddingLeft="23dp"
+            android:paddingRight="23dp"
+            android:text="开启应用"
+            android:textColor="@color/orange_ff725c"
+            android:textSize="@dimen/text_size_17" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="113" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

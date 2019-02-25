@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">shop</string>
+    <!-- 下拉刷新，上拉加载更多 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <string-array name="browsingHistory">
+        <item>商品</item>
+        <item>服务</item>
+        <item>活动</item>
+    </string-array>
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="noShopServiceHint">该小区暂未开通商超服务</string>
+    <string name="noLocalLifeServiceHint">该小区暂未开通此服务</string>
+</resources>

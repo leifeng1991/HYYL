@@ -1,0 +1,1 @@
+include ':app', ':base', ':qcloud_wxyt', ':RongIMLib', ':multi-image-selector', ':chat', ':xrecyclerview', ':speech', ':CallLib', ':shop', ':licallife'

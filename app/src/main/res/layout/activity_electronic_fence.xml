@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/id_amap_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="674">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/id_location_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/id_location_search"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:hint="搜索附近的写字楼、小区、学校等"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="35dp"
+                android:textColorHint="@color/text_b5"
+                android:textSize="@dimen/text_size_13" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/search_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_location"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="位置：北京市朝阳区朝阳门北大街18号"
+            android:textColor="#FF444444"
+            android:textSize="15sp" />
+
+        <View
+            style="@style/horizontallLine_e7"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前经度"
+                android:textColor="#FF888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/id_longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="#FF444444"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/horizontallLine_e7"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前纬度"
+                android:textColor="#FF888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/id_latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="#FF444444"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View style="@style/horizontallLine_e7" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="开启围栏"
+                android:textColor="#FF888888"
+                android:textSize="15sp" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/id_setting_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:sb_checked_color="#54B1F8"
+                app:sb_show_indicator="false" />
+        </RelativeLayout>
+
+        <View style="@style/horizontallLine_e7" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="围栏半径"
+                android:textColor="#FF888888"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/id_fence_radius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="0.0米"
+                android:textColor="#FF444444"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/id_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:thumb="@drawable/shape_circle_54b1f8" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="183" />
+</LinearLayout>

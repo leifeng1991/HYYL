@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/id_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="营养早餐套餐A"
+                android:textColor="@color/text_4"
+                android:textSize="@dimen/text_size_17" />
+
+            <TextView
+                android:id="@+id/id_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="粥+包子+小菜+紫菜汤..."
+                android:textColor="@color/text_8"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/id_residue_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="剩余100份"
+                android:textColor="@color/text_4"
+                android:textSize="@dimen/text_size_15" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="bottom">
+
+                <TextView
+                    android:id="@+id/id_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥6.00"
+                    android:textColor="#FFFF6600"
+                    android:textSize="@dimen/text_size_20" />
+
+                <TextView
+                    android:id="@+id/id_goods_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="x 1"
+                    android:textColor="#FF565656"
+                    android:textSize="@dimen/text_size_17" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/HorizontalHalvingLine_1" />
+</LinearLayout>

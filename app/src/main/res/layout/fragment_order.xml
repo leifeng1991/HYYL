@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/HorizontalHalvingLine_1" />
+
+    <TextView
+        android:id="@+id/id_no_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="请先登录" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/id_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/id_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/id_shop_order_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TitleTextView"
+                    android:text="购 物 订 单"
+                    android:textColor="#FF3AA5" />
+
+                <View
+                    style="@style/HorizontalHalvingLine_1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/id_all_orders"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_obligation"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_send_goods"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_wait_receiving"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_remain_evaluated"
+                        style="@style/OrderTextView" />
+
+                </LinearLayout>
+
+                <View style="@style/HorizontalHalvingLine_5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_service_orders_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TitleTextView"
+                    android:text="服 务 订 单"
+                    android:textColor="#4A90E2" />
+
+                <View
+                    style="@style/HorizontalHalvingLine_1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/id_service_all_orders"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_subscribe"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_service_remain_evaluated"
+                        style="@style/OrderTextView" />
+
+                </LinearLayout>
+
+                <View style="@style/HorizontalHalvingLine_5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_delivery_orders_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TitleTextView"
+                    android:text="外 卖 订 单"
+                    android:textColor="#F59623" />
+
+                <View
+                    style="@style/HorizontalHalvingLine_1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/id_delivery_orders"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_shop_order"
+                        style="@style/OrderTextView" />
+
+                </LinearLayout>
+
+                <View style="@style/HorizontalHalvingLine_5dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_participate_activities_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/id_participate_activities"
+                    style="@style/TitleTextView"
+
+                    android:text="参 与 活 动"
+                    android:textColor="#8C68DB" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_more" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/HorizontalHalvingLine_1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/activity_activity_list_item" />
+
+                <TextView
+                    android:id="@+id/id_no_participate_activities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="还未参加任何活动"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/id_yyyl_order_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View style="@style/HorizontalHalvingLine_5dp" />
+
+                <TextView
+                    style="@style/TitleTextView"
+                    android:text="医 疗 预 约 订 单"
+                    android:textColor="#FF8CA8" />
+
+                <View
+                    style="@style/HorizontalHalvingLine_1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/id_yyyl_obligation"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_yyyl_for_service"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_yyyl_lost_efficacy"
+                        style="@style/OrderTextView" />
+
+                    <TextView
+                        android:id="@+id/id_yyyl_done"
+                        style="@style/OrderTextView" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

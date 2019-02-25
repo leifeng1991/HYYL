@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <com.xxzlkj.shop.weight.HeaderRecyclerView
+        android:id="@+id/id_shop_home_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View style="@style/line_5dp" />
+</LinearLayout>

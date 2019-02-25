@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="- -"
+            android:textColor="#FF666666"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_title_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="- -"
+            android:textColor="#FF666666"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="39dp">
+
+        <TextView
+            android:id="@+id/tv_send_call_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="13dp"
+            android:drawableTop="@mipmap/ic_call_hang_up"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#FF666666"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/vg_receive_call_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_receive_call_hang_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="13dp"
+                android:drawableTop="@mipmap/ic_call_hang_up"
+                android:gravity="center"
+                android:text="拒绝"
+                android:textColor="#FF666666"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_receive_call_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="87dp"
+                android:drawablePadding="13dp"
+                android:drawableTop="@mipmap/ic_call_accept"
+                android:gravity="center"
+                android:text="接听"
+                android:textColor="#FF666666"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vg_calling_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_calling_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="00:00"
+                android:textColor="#FF666666"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <TextView
+                    android:id="@+id/tv_calling_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="13dp"
+                    android:drawableTop="@mipmap/ic_call_mute"
+                    android:gravity="center"
+                    android:text="静音"
+                    android:textColor="#FF666666"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_calling_hang_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="37dp"
+                    android:layout_marginRight="37dp"
+                    android:drawablePadding="13dp"
+                    android:drawableTop="@mipmap/ic_call_hang_up"
+                    android:gravity="center"
+                    android:text="挂断"
+                    android:textColor="#FF666666"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_calling_speakerphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="13dp"
+                    android:drawableTop="@mipmap/ic_call_accept"
+                    android:gravity="center"
+                    android:text="扬声器"
+                    android:textColor="#FF666666"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

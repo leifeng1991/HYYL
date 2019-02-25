@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+
+        <ImageView
+            android:id="@+id/id_ali_image"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/sc_zholin" />
+
+        <TextView
+            android:id="@+id/id_ali_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/id_ali_image"
+            android:text="兆邻自营"
+            android:textColor="@color/text_08"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_ali_state"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="18dp"
+            android:text="已完成"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="20dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_ali_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/id_ali_detail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right|center_vertical"
+        android:text="你哈啊啊啊啊啊"
+        android:textSize="@dimen/text_size_14" />
+
+    <View
+        android:id="@+id/id_ali_line"
+        style="@style/line_5dp" />
+</LinearLayout>

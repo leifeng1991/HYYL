@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/HorizontalHalvingLine_1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/id_magic_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="#e8e8e8" />
+            </RelativeLayout>
+
+            <View style="@style/HorizontalHalvingLine_1" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View style="@style/HorizontalHalvingLine_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#f6f6f6">
+
+                <LinearLayout
+                    android:id="@+id/id_bottom_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/id_shop_cart_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/id_shop_cart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:src="@mipmap/ic_shop_cart" />
+
+                        <com.xxzlkj.huayiyanglao.weight.ShapeButton
+                            android:id="@+id/id_shop_cart_number"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="-5dp"
+                            android:layout_toRightOf="@+id/id_shop_cart"
+                            android:textSize="9sp"
+                            app:fb_defaultColor="#FF725C"
+                            app:fb_radius="7dp"
+                            app:fb_text="0"
+                            app:fb_textGravity="center">
+
+                        </com.xxzlkj.huayiyanglao.weight.ShapeButton>
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/VerticalHalvingLine_1"
+                        android:layout_margin="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/id_sc_total_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="实付金额："
+                            android:textColor="@color/text_36"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/id_total_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥0.00"
+                            android:textColor="@color/text_price"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/id_immediate_payment"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/theme_color"
+                    android:text="立即支付"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_dialog_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:background="#43000000"
+            android:orientation="vertical"
+            android:paddingTop="100dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <include layout="@layout/dialog_goods_list" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

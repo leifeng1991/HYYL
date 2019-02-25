@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="106dp"
+            android:layout_height="106dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="17dp"
+            android:layout_marginTop="17dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="- -"
+                android:textColor="@color/black_222833"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="- -%（好评）"
+                android:textColor="@color/black_746f6e"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="- -天（在岗时间）"
+                android:textColor="@color/black_746f6e"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_tab1"
+                    style="@style/TabButton"
+                    android:text="10天经验"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_tab2"
+                    style="@style/TabButton"
+                    android:layout_marginLeft="7dp"
+                    android:text="高中"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_tab3"
+                    style="@style/TabButton"
+                    android:layout_marginLeft="7dp"
+                    android:text="北京人"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="- -/月"
+                android:textColor="@color/orange_ff725c"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/lineHorizontalOrder"
+        android:layout_alignBottom="@+id/iv_icon"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+</LinearLayout>

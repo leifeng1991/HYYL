@@ -1,0 +1,99 @@
+<resources>
+    <!-- 显示时间 -->
+    <style name="sessionTextViewTime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:background">@drawable/shape_notification_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="sessionLinearLayoutUserInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_marginRight">22dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="sessionTextViewName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="sessionImageViewAvatar">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:src">@mipmap/default_icon</item>
+    </style>
+
+    <style name="sessionLinearLayoutMessage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="sessionProgressBar">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="sessionTextViewMessage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:autoLink">phone|email|map|web</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:linksClickable">true</item>
+        <item name="android:maxWidth">240dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textColor">#02090b</item>
+        <item name="android:textColorLink">#3655bf</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="sessionRelativeLayoutAudio">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="sessionImageViewAudio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="sessionTextViewAudio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#18212a</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="sessionImageViewRedPoint">
+        <item name="android:layout_width">5dp</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:src">@drawable/shape_session_is_read</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+</resources>

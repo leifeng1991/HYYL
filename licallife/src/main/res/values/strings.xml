@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">licallife</string>
+    <string-array name="houserkeepingTitle">
+        <item>项目</item>
+        <item>保洁师</item>
+    </string-array>
+    <string-array name="subscribeTitle">
+        <item>单次预约</item>
+        <item>周期预约</item>
+    </string-array>
+    <string-array name="peopleList">
+        <item>人员审核</item>
+        <item>人员列表</item>
+    </string-array>
+
+</resources>

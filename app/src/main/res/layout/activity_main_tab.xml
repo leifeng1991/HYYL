@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/realTabContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabHost" />
+
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottomLayoutColor"
+        android:elevation="10dp" />
+
+    <RelativeLayout
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_oval_f2f2f2"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="62dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2px"
+                android:background="@color/bottomLayoutColor" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="1dp"
+            android:src="@mipmap/ic_main_center_normal" />
+    </RelativeLayout>
+
+</RelativeLayout>

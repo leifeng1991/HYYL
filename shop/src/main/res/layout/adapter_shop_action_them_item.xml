@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:id="@+id/id_image_layout"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="11dp">
+
+                    <ImageView
+                        android:id="@+id/id_sati_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/id_coverage_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/id_image_layout"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:id="@+id/id_sati_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/text_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/id_sati_ads"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_9c"
+                        android:textSize="@dimen/text_size_10" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/id_sati_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textColor="@color/text_price"
+                            android:textSize="@dimen/text_size_17" />
+
+                        <TextView
+                            android:id="@+id/id_sati_prices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_a2"
+                            android:textSize="@dimen/text_size_10" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/id_sati_add_shopcart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="22dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/add_circle"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/id_yushou_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="22dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone">
+
+                    <com.xxzlkj.shop.weight.CustomButton
+                        android:id="@+id/id_yushou_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="18dp"
+                        app:fb_defaultColor="@color/text_price"
+                        app:fb_radius="9dp"
+                        app:fb_text="预售"
+                        app:fb_textColor="@color/white"
+                        app:fb_textSize="@dimen/text_size_11" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/id_sati_right_line"
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/line_f126" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/line_f126" />
+    </LinearLayout>
+
+</RelativeLayout>

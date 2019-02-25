@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_fafbfd"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27.5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="11.5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_search_radius_gray"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/search_icon" />
+
+            <EditText
+                android:id="@+id/id_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="搜索"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColorHint="@color/text_9"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_hs_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="23dp"
+            android:text="取消"
+            android:textColor="@color/text_6"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2">
+
+    </LinearLayout>
+</LinearLayout>

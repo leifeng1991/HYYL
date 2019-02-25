@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/title_bar_bg">
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/id_hs_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/id_hs_cancel"
+            android:background="@drawable/shape_search_radius_gray"
+            app:searchHintIcon="@android:color/transparent"
+            app:searchIcon="@mipmap/search_icon" />
+
+        <TextView
+            android:id="@+id/id_hs_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="14dp"
+            android:text="取消"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <View style="@style/horizontallLine" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="热门搜索"
+        android:textColor="@color/text_89"
+        android:textSize="@dimen/text_size_14" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/id_hs_flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:max_select="1" />
+
+    <View style="@style/line_5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="搜索历史"
+        android:textColor="@color/text_89"
+        android:textSize="@dimen/text_size_14" />
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="20dp" />
+
+    <com.xxzlkj.shop.weight.HeaderRecyclerView
+        android:id="@+id/id_hs_history_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <include layout="@layout/view_clear_history" />
+</LinearLayout>

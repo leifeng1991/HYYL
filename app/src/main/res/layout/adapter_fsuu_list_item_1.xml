@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/id_fli_usericon"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/id_fli_usericon"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_fli_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_4"
+                    android:textSize="@dimen/text_size_15" />
+
+                <TextView
+                    android:id="@+id/id_fli_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/text_b4"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_fli_sex_layout"
+                android:layout_width="36dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_man_corners"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id_fli_sex_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/id_fli_sex_year"
+                    style="@style/foundLeftTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_fli_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/text_b4"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="18dp" />
+</LinearLayout>

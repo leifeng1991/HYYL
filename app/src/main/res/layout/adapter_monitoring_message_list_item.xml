@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_property_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="11dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="11dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/id_user_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/id_nick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/id_user_avatar"
+                android:singleLine="true"
+                android:text="郑医生"
+                android:textColor="#FF444444"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/id_real_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_nick"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/id_user_avatar"
+                android:singleLine="true"
+                android:text="真实姓名：黄冈"
+                android:textColor="#FF999999"
+                android:textSize="@dimen/text_size_15" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03月27日 20:00"
+                android:textColor="#FF666666"
+                android:textSize="@dimen/text_size_11" />
+
+            <TextView
+                android:id="@+id/id_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="已接受"
+                android:textColor="#FFB4B4B4"
+                android:textSize="@dimen/text_size_15"
+                android:visibility="gone" />
+
+            <com.xxzlkj.huayiyanglao.weight.ShapeButton
+                android:id="@+id/id_receiver_btn"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                app:fb_defaultColor="#54B1F8"
+                app:fb_radius="4dp"
+                app:fb_text="接受"
+                app:fb_textColor="@color/white"
+                app:fb_textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_1px" />
+</LinearLayout>

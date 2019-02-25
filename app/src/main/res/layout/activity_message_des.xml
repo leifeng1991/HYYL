@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/lineHorizontalE8E8E8" />
+
+    <LinearLayout
+        android:id="@+id/ll_webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/ll_message_des_btn"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@color/white_f2f2f2"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <Button
+            android:id="@+id/tv_message_des_btn1"
+            style="@style/btnMessageDes"
+            android:layout_marginRight="13dp"
+            android:background="@drawable/shape_rectangle_orderdes_yellow"
+            android:text="查看优惠券" />
+
+        <Button
+            android:id="@+id/tv_message_des_btn2"
+            style="@style/btnMessageDes"
+            android:background="@drawable/shape_rectangle_orderdes_orange"
+            android:text="立即使用" />
+
+    </LinearLayout>
+
+</LinearLayout>

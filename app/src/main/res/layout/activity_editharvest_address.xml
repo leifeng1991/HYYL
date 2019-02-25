@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <View
+        android:id="@+id/id_eha_line"
+        style="@style/HorizontalHalvingLine_1"
+        android:layout_below="@id/titleBar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_eha_line"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/eidtAddressLl">
+
+            <TextView
+                style="@style/eidtAddressText_1"
+                android:text="收货人：" />
+
+            <EditText
+                android:id="@+id/id_eha_name"
+                style="@style/eidtAddressDditext"
+                android:imeOptions="actionNext"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalHalvingLine_1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <LinearLayout style="@style/eidtAddressLl">
+
+            <TextView
+                style="@style/eidtAddressText_1"
+                android:text="手机号：" />
+
+            <EditText
+                android:id="@+id/id_eha_phone"
+                style="@style/eidtAddressDditext"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalHalvingLine_1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <RelativeLayout
+            android:id="@+id/id_eha_location_layout"
+            style="@style/eidtAddressLl">
+
+            <TextView
+                android:id="@+id/id_eha_loaction_tip"
+                style="@style/eidtAddressText_1"
+                android:layout_centerVertical="true"
+                android:text="坐标：" />
+
+            <TextView
+                android:id="@+id/id_eha_location"
+                style="@style/eidtAddressDditext"
+                android:layout_toLeftOf="@+id/id_eha_more_1"
+                android:layout_toRightOf="@id/id_eha_loaction_tip"
+                android:gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/id_eha_more_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_more" />
+        </RelativeLayout>
+
+        <View
+            style="@style/HorizontalHalvingLine_1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <LinearLayout style="@style/eidtAddressLl">
+
+            <TextView
+                style="@style/eidtAddressText_1"
+                android:text="详细地址：" />
+
+            <EditText
+                android:id="@+id/id_eha_detail_address"
+                style="@style/eidtAddressDditext"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalHalvingLine_1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <LinearLayout style="@style/eidtAddressLl">
+
+            <TextView
+                style="@style/eidtAddressText_1"
+                android:text="身份：" />
+
+            <EditText
+                android:id="@+id/id_eha_idcard"
+                style="@style/eidtAddressDditext"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalHalvingLine_1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <RelativeLayout style="@style/eidtAddressLl">
+
+            <TextView
+                android:id="@+id/id_eha_default_tip"
+                style="@style/eidtAddressText_1"
+                android:layout_centerVertical="true"
+                android:text="默认地址：" />
+
+            <CheckBox
+                android:id="@+id/id_eha_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:button="@drawable/selector_checked_bg" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_eha_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#FF54B1F8"
+        android:text="保  存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_17" />
+
+
+</RelativeLayout>

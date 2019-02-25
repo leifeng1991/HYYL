@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <View
+        android:id="@+id/id_mso_line"
+        style="@style/horizontallLine" />
+
+    <com.xxzlkj.zhaolinshare.base.MyRecyclerView
+        android:id="@+id/id_mc_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f2f6"/>
+</LinearLayout>

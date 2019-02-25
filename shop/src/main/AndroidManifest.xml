@@ -1,0 +1,103 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xxzlkj.shop">
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activity.shop.BrowsingHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.SpeedGoodsCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.GoodsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.HotSearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.MakeSureOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.shop.PayAndDistributionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.PaySuccessOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DividerTheme" />
+        <activity
+            android:name=".activity.shop.SearchGoodsListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DividerTheme" />
+        <activity
+            android:name=".activity.shop.SelectCouponsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.ShopActionThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.ShopCartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DividerTheme" />
+        <activity
+            android:name=".activity.shop.SpelledGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.SpelledGroupDesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shop.StoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.AfterSaleListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.AfterSalesDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.ApplyComplainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.ApplyRefundActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.ApplySalesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.OrderDesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.OrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.OrderRefundDesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.RefundDesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.shopOrder.SalesReturnWayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShopHomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.address.EditHarvestAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.address.HarvestAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.address.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.address.LocationSearchActivity"
+            android:screenOrientation="portrait" />
+    </application>
+</manifest>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/id_gti_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/id_gti_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_gti_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:maxLines="1"
+        android:textColor="@color/text_6"
+        android:textSize="@dimen/text_size_10" />
+</RelativeLayout>

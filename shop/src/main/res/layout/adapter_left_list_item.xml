@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_select_left_bg">
+
+    <TextView
+        android:id="@+id/id_lli_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/selector_select_color"
+        android:textSize="@dimen/text_size_14" />
+
+    <ImageView
+        android:id="@+id/id_lli_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="20dp"
+        android:src="@mipmap/more_icon" />
+
+    <TextView
+        android:id="@+id/id_lli_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/id_lli_more"
+        android:textColor="@color/text_7"
+        android:textSize="@dimen/text_size_14" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@color/line_3" />
+</RelativeLayout>

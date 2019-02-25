@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_layout_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/id_tip_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:src="@mipmap/ic_device" />
+
+    <TextView
+        android:id="@+id/id_tip_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="设备号：12345678987654321"
+        android:textColor="#FF444444"
+        android:textSize="@dimen/text_size_17"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_tip_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="您已解绑设备，并已发送相关消息给您的亲人"
+        android:textColor="#FF777777"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_tip_text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="您已解绑设备，并已发送相关消息给您的亲人"
+        android:textColor="#FF444444"
+        android:textSize="@dimen/text_size_17"
+        android:visibility="gone" />
+
+    <com.xxzlkj.shop.weight.CustomButton
+        android:id="@+id/id_tip_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:fb_defaultColor="#FF54B1F8"
+        app:fb_radius="7dp"
+        app:fb_text="解绑"
+        app:fb_textColor="@color/white"
+        app:fb_textSize="@dimen/text_size_17" />
+</LinearLayout>

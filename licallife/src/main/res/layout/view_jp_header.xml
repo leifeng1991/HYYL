@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/line_f126"
+    android:orientation="vertical">
+
+    <com.xxzlkj.shop.weight.BannerView
+        android:id="@+id/id_jz_project_banner"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@color/white">
+
+        <com.xxzlkj.shop.weight.CustomRecyclerView
+            android:id="@+id/id_jz_project_type_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/line_f126" />
+</LinearLayout>
+
+

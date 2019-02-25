@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:contentDescription="修改布局的时候，要检查Activity代码，滚动判断获取电话按钮的top"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/horizontallLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/id_gd_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/local_life_home_bottom">
+                <!--height 375-->
+                <ImageView
+                    android:id="@+id/id_pd_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/id_relativelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="18dp">
+
+                    <TextView
+                        android:id="@+id/id_pd_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_price"
+                        android:textSize="@dimen/text_size_20" />
+
+                    <TextView
+                        android:id="@+id/id_pd_now"
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_buy_now"
+                        android:gravity="center"
+                        android:text="立即预约"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <LinearLayout
+                        android:id="@+id/id_pd_phone"
+                        android:layout_width="75dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/id_pd_now"
+                        android:background="@drawable/shape_orange"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:src="@mipmap/white_phone_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="电话"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/id_pd_preferential"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_pd_price"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/text_746f6e"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/id_pd_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_pd_preferential"
+                        android:layout_marginTop="10dp"
+                        android:text="本活动只适用于日常保洁，不含深度保洁、家电清洗和洗护"
+                        android:textColor="@color/text_746f6e"
+                        android:textSize="@dimen/text_size_12"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <View style="@style/line_5dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/id_pd_bottom_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/local_life_home_bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_f2f2f2"
+            android:gravity="center|right"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/id_pd_phone_bottom"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_orange"
+                android:gravity="center"
+                android:text="电话"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/id_pd_now_bottom"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_buy_now"
+                android:gravity="center"
+                android:text="立即预约"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

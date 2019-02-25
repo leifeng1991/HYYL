@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="35dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View style="@style/verticalLine" />
+
+        <TextView
+            android:id="@+id/id_table_key"
+            style="@style/goodsDetailText_1"
+            android:layout_weight="2" />
+
+        <View style="@style/verticalLine" />
+
+        <TextView
+            android:id="@+id/id_table_value"
+            style="@style/goodsDetailText_1"
+            android:layout_weight="1" />
+
+        <View style="@style/verticalLine" />
+    </LinearLayout>
+
+    <View style="@style/horizontallLine" />
+</LinearLayout>

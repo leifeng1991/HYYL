@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/lineHorizontalE8E8E8" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_header_success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="30dp"
+                    android:drawableLeft="@mipmap/ic_success"
+                    android:drawablePadding="14dp"
+                    android:text="退款成功"
+                    android:textColor="@color/black_444444"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_refund_header_money"
+                    style="@style/tvOrderRefundDesItem"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="24dp"
+                    android:text="退款金额：——" />
+
+                <TextView
+                    android:id="@+id/tv_refund_header_time"
+                    style="@style/tvOrderRefundDesItem"
+                    android:layout_marginBottom="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="15dp"
+                    android:text="退款时间：——" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_header_ing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:drawableLeft="@mipmap/ic_ing"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:text="等待商家处理退款申请"
+                    android:textColor="@color/black_444444"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_header_ing_des"
+                    style="@style/tvOrderRefundDesItem"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black_777777"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="17dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_refund_but1"
+                        android:layout_width="140dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/selector_order_btn_gray"
+                        android:gravity="center"
+                        android:text="修改退款申请"
+                        android:textColor="@color/selector_order_btn_gray_a1a1a1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_refund_but2"
+                        android:layout_width="140dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="34dp"
+                        android:background="@drawable/selector_order_btn_orange"
+                        android:gravity="center"
+                        android:text="撤销退款申请"
+                        android:textColor="@color/selector_order_btn_orange"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_height="5dp"
+                android:background="@color/white_f1f2f6" />
+
+            <TextView
+                style="@style/tv_15sp_333333"
+                android:layout_marginBottom="27dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="15dp"
+                android:text="详情信息" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_name"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="店铺名称：——" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_type"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="退款类型：——" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_money"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="退款金额：——" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_reason"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="退款原因：——" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_des"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="退款说明：——" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_id"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="退款编号：——" />
+
+            <View
+                style="@style/lineHorizontalOrder"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/tv_refund_time"
+                style="@style/tvOrderRefundDesItem"
+                android:layout_marginLeft="22dp"
+                android:text="申请时间：——" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

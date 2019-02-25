@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_style_6_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+
+        <ImageView
+            android:id="@+id/id_tuan_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#b3ffffff"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/id_tuan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_tuan_guige"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_9c"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp">
+
+        <ImageView
+            android:id="@+id/id_tuan_peple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_tuan_peples"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="20dp"
+            android:background="@mipmap/peoples_shop" />
+
+        <TextView
+            android:id="@+id/id_tuan_peples"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/id_tuan_price"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/id_tuan_peple"
+            android:text="2人成团"
+            android:textColor="@color/text_6"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_tuan_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/id_tuan_prices"
+            android:singleLine="true"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"/>
+
+        <TextView
+            android:id="@+id/id_tuan_prices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/id_tuan_price"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/id_tuan_buy_now"
+            android:singleLine="true"
+            android:textColor="@color/text_ac"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_tuan_buy_now"
+            android:layout_width="77dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_buy_now"
+            android:gravity="center"
+            android:text="去抢购"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/id_tuan_line"
+        style="@style/line_5dp" />
+</LinearLayout>

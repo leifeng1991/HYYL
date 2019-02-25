@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/item_apply_refund">
+
+            <TextView
+                style="@style/tv_14sp_484848"
+                android:text="退货原因*：" />
+
+            <TextView
+                android:id="@+id/tv_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/more_icon"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_7B7B7B"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View style="@style/lineHorizontalOrder" />
+
+        <LinearLayout style="@style/item_apply_refund">
+
+            <TextView
+                style="@style/tv_14sp_484848"
+                android:text="退款金额*：" />
+
+            <EditText
+                android:id="@+id/et_max_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="最多52.00"
+                android:inputType="numberDecimal"
+                android:textColor="@color/gray_7B7B7B"
+                android:textColorHint="@color/gray_c0c0c0"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View style="@style/lineHorizontalOrder" />
+
+        <LinearLayout style="@style/item_apply_refund">
+
+            <TextView
+                style="@style/tv_14sp_484848"
+                android:text="退货说明："
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_des"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_rectangle_f5f6f8"
+                android:gravity="top"
+                android:hint="最多不超过100字…"
+                android:maxLength="100"
+                android:padding="15dp"
+                android:textColor="@color/gray_7B7B7B"
+                android:textColorHint="@color/gray_c0c0c0"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View style="@style/lineHorizontalOrder" />
+
+        <com.xxzlkj.shop.weight.MyImageSelectView
+            android:id="@+id/myImageSelectView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_summit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/theme_color"
+        android:text="提交申请"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>

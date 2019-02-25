@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 显示时间 -->
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/sessionTextViewTime"
+        android:text="下午 5点" />
+
+    <LinearLayout
+        style="@style/sessionLinearLayoutUserInfo"
+        android:layout_gravity="right">
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/sessionTextViewName"
+            android:layout_marginRight="15dp"
+            android:text="CSDN_LQR" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            style="@style/sessionImageViewAvatar" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/sessionLinearLayoutMessage"
+        android:layout_gravity="right">
+
+        <!-- 重试 -->
+        <include layout="@layout/layout_session_error" />
+
+        <ProgressBar
+            android:id="@+id/pbSending"
+            style="@style/sessionProgressBar" />
+
+        <RelativeLayout
+            android:id="@+id/rlAudio"
+            style="@style/sessionRelativeLayoutAudio"
+            android:background="@drawable/ic_session_right">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAudio"
+                    style="@style/sessionImageViewAudio"
+                    android:background="@drawable/yuyin_anim_right" />
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    style="@style/sessionTextViewAudio"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/ivAudio"
+                    android:text="6''" />
+
+                <ImageView
+                    android:id="@+id/ivIsRead"
+                    style="@style/sessionImageViewRedPoint"
+                    android:layout_marginLeft="9dp"
+                    android:layout_toRightOf="@+id/tvDuration" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

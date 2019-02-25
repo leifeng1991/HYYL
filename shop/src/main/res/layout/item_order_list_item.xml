@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_order_des_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_des_name"
+                style="@style/tv_15sp_666666"
+                android:maxLines="1"
+                android:text="——"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_order_des_specification"
+                style="@style/tv_14sp_9c9c9c"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:text="规格：——" />
+
+            <LinearLayout
+                android:id="@+id/vg_pre_sale_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp">
+
+                <com.xxzlkj.shop.weight.CustomButton
+                    android:id="@+id/id_advance"
+                    android:layout_width="38dp"
+                    android:layout_height="16dp"
+                    app:fb_borderColor="#F5A623"
+                    app:fb_borderWidth="1px"
+                    app:fb_defaultColor="@color/transparent"
+                    app:fb_radius="20dp"
+                    app:fb_text="预售"
+                    app:fb_textColor="#FFF5A623"
+                    app:fb_textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_pre_sale_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="活动结束 1 天发货"
+                    android:textColor="#FFF5A623"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="11dp">
+
+                <TextView
+                    android:id="@+id/tv_order_des_money"
+                    style="@style/tv_15sp_ff725c"
+                    android:text="¥ ——"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_order_des_money_old"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_order_des_money"
+                    android:layout_marginLeft="12sp"
+                    android:layout_toRightOf="@+id/tv_order_des_money"
+                    android:paddingBottom="3dp"
+                    android:text="¥ ——"
+                    android:textColor="@color/black_a2a2a2"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_order_des_number"
+                    style="@style/tv_12sp_565656"
+                    android:layout_alignBottom="@id/tv_order_des_money"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="3dp"
+                    android:text="x 1"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/lineHorizontalOrder"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+
+
+</LinearLayout>

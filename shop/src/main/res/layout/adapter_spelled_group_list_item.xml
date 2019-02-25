@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/id_user_avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/id_user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="#FF222833"
+            android:textSize="@dimen/text_size_14"
+            android:layout_marginLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/id_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FF746F6E"
+            android:textSize="@dimen/text_size_10"
+            android:gravity="center"/>
+
+        <com.xxzlkj.shop.weight.CustomButton
+            android:id="@+id/id_offered"
+            android:layout_width="66dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            app:fb_defaultColor="#E6001C"
+            app:fb_radius="5dp"
+            app:fb_text="去参团" />
+    </LinearLayout>
+
+    <View style="@style/line_1px" />
+</LinearLayout>

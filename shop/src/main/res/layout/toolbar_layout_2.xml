@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_mtl_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/title_bar_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/id_left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@mipmap/back_slod" />
+
+        <ImageView
+            android:id="@+id/id_left_images"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@mipmap/back_arrow" />
+
+        <ImageView
+            android:id="@+id/id_right_image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="8dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/share_gray_icon" />
+
+        <ImageView
+            android:id="@+id/id_right_images_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:alpha="0"
+            android:paddingLeft="8dp"
+            android:paddingRight="20dp"
+            android:src="@mipmap/share_icon" />
+
+        <ImageView
+            android:id="@+id/id_right_image_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/id_right_image_1"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/collect_gray_icon" />
+
+        <ImageView
+            android:id="@+id/id_right_images_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/id_right_images_1"
+            android:alpha="0"
+            android:paddingLeft="15dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/collect_normal" />
+    </RelativeLayout>
+</RelativeLayout>

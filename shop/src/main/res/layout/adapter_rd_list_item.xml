@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fffffb"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_ali_zhaolin_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/sc_zholin" />
+
+        <TextView
+            android:id="@+id/id_ali_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/id_ali_zhaolin_image"
+            android:src="@mipmap/sc_zholin"
+            android:text="兆邻自营"
+            android:textColor="@color/text_03"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_ali_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/id_ali_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_ali_image">
+
+            <TextView
+                android:id="@+id/id_ali_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_ali_service_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_ali_title"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/gray_746f6e"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/id_ali_service_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_ali_service_hours"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/gray_746f6e"
+                android:textSize="@dimen/text_size_12" />
+
+
+            <TextView
+                android:id="@+id/id_ali_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_ali_service_time"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_price"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/id_ali_prices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/id_ali_price"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@id/id_ali_price"
+                android:textColor="@color/text_a2"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/id_ali_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/id_ali_price"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/text_56"
+                android:textSize="@dimen/text_size_13" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_below="@id/id_ali_image"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/id_ali_time_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款时间："
+            android:textColor="@color/text_72"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_ali_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/id_ali_time_tip"
+            android:textColor="@color/text_72"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_ali_total_price_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/id_ali_total_price"
+            android:text="退款金额："
+            android:textColor="@color/text_72"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_ali_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_below="@id/id_ali_image"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/id_ali_detail"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_orange_stroke"
+        android:gravity="center"
+        android:text="查看详情"
+        android:textColor="@color/text_price"
+        android:textSize="12.5sp" />
+
+    <View style="@style/line_5dp" />
+</LinearLayout>

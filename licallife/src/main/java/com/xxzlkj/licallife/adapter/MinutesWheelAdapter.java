@@ -1,0 +1,66 @@
+package com.xxzlkj.licallife.adapter;
+
+
+import com.bigkoo.pickerview.adapter.WheelAdapter;
+
+/**
+ * Numeric Wheel adapter.
+ */
+public class MinutesWheelAdapter implements WheelAdapter {
+
+    /**
+     * The default min value
+     */
+    public static final int DEFAULT_MAX_VALUE = 1;
+
+    /**
+     * The default max value
+     */
+    private static final int DEFAULT_MIN_VALUE = 0;
+
+    // Values
+    private int minValue;
+    private int maxValue;
+
+    /**
+     * Default constructor
+     */
+    public MinutesWheelAdapter() {
+        this(DEFAULT_MIN_VALUE, DEFAULT_MAX_VALUE);
+    }
+
+    /**
+     * Constructor
+     *
+     * @param minValue the wheel min value
+     * @param maxValue the wheel max value
+     */
+    public MinutesWheelAdapter(int minValue, int maxValue) {
+        this.minValue = minValue;
+        this.maxValue = maxValue;
+    }
+
+    @Override
+    public Object getItem(int index) {
+        if (index >= 0 && index < getItemsCount()) {
+            int value = minValue + index;
+            return value * 30;
+        }
+        return 0;
+    }
+
+    @Override
+    public int getItemsCount() {
+        return maxValue - minValue + 1;
+    }
+
+    @Override
+    public int indexOf(Object o) {
+        try {
+            return (int) o - minValue;
+        } catch (Exception e) {
+            return -1;
+        }
+
+    }
+}

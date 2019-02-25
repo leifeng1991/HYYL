@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <View style="@style/line_5dp" />
+
+    <include layout="@layout/adapter_shop_home_title_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="13dp">
+
+        <View style="@style/horizontallLine" />
+
+        <LinearLayout
+            android:id="@+id/id_shs10_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    style="@style/verticalLine"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_1"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_2"
+                    style="@style/ShopHomeWeight" />
+
+                <View
+                    style="@style/verticalLine"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View style="@style/horizontallLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_shs10_layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_3"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_4"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_5"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_6"
+                    style="@style/ShopHomeWeight" />
+
+            </LinearLayout>
+
+            <View style="@style/horizontallLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_shs10_layout_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_7"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_8"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_9"
+                    style="@style/ShopHomeWeight" />
+
+                <View style="@style/verticalLine" />
+
+                <ImageView
+                    android:id="@+id/id_shs10_image_10"
+                    style="@style/ShopHomeWeight" />
+
+            </LinearLayout>
+
+            <View style="@style/horizontallLine" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

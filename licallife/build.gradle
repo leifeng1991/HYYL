@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        // 网络正测试配置
+        buildConfigField "boolean", "isTest", versions.isTest ? "true" : "false"
+
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    // 继承自依赖库
+    compile project(':shop')
+    // 模糊
+    compile 'com.wonderkiln:blurkit:1.0.0'
+    // LayoutManager
+    compile 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+}

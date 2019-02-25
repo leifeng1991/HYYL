@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/title_bar_bg">
+
+        <ImageView
+            android:id="@+id/id_title_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scaleType="fitStart"
+            android:src="@mipmap/back_arrow" />
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="18dp"
+            android:text="编辑"
+            android:textColor="@color/text_7"
+            android:textSize="@dimen/text_size_17" />
+    </RelativeLayout>
+
+    <View style="@style/horizontallLine" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_bh_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </android.support.v4.view.ViewPager>
+
+    <View
+        style="@style/line_bottom_top"
+        android:layout_alignTop="@+id/id_bottom" />
+
+    <RelativeLayout
+        android:id="@+id/id_bh_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/backgroud_f2"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/id_bh_all_checkbox"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:background="@null"
+            android:text="全选"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_bh_delete"
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/shape_orange_stroke_nosolid"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_collect_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/backgroud_f2"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/id_collect_all_checkbox"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:background="@null"
+            android:text="全选"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_collect_clear"
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/shape_orange_stroke_nosolid"
+            android:gravity="center"
+            android:text="清除失效商品"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/id_collect_cancel"
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/id_collect_clear"
+            android:background="@drawable/shape_gray_stroke_nosolid"
+            android:gravity="center"
+            android:text="取消收藏"
+            android:textColor="@color/text_7"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+</LinearLayout>

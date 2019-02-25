@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/id_li_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_li_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:textColor="@color/text_3a"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/id_li_detail_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址"
+            android:textColor="@color/text_a3"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/id_li_image"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_select_location"/>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

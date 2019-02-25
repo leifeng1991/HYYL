@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id_sati_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_f1f2f6"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="— 蔬菜水果 —"
+        android:textColor="@color/text_6"
+        android:textSize="@dimen/text_size_15" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_sati_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

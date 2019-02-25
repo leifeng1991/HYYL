@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#e4e4e4" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:background="#FFC8C8C8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="不可约"
+                android:textColor="#FF746F6E"
+                android:textSize="@dimen/text_size_13" />
+
+            <View
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_rectangle_c8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="可约"
+                android:textColor="#FF746F6E"
+                android:textSize="@dimen/text_size_13" />
+
+            <View
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginLeft="10dp"
+                android:background="#FF54B1F8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:text="已选中"
+                android:textColor="#FF746F6E"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

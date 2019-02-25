@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <com.xxzlkj.shop.weight.MyMarqueeView
+            android:id="@+id/mv_hint_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="21dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_shop_home_bg"
+            app:mvAnimDuration="200"
+            app:mvInterval="3000"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/black_444444"
+            app:mvTextSize="@dimen/text_size_13" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/vg_location_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_loaction_no" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="获取定位失败，无法查看～"
+                    android:textColor="@color/black_888888"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_location_btn"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/shape_rectangle_no_data"
+                        android:gravity="center"
+                        android:text="手动定位"
+                        android:textColor="@color/orange_ff725c"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_setting_btn"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/shape_rectangle_no_data"
+                        android:gravity="center"
+                        android:text="设置定位"
+                        android:textColor="@color/orange_ff725c"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/vg_shop_server_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_f1f2f6"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_shop_server_no" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="当前地址所在小区暂无开通商城服务哦～\n请切换地址"
+                    android:textColor="@color/black_888888"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/id_shop_home_alph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vg_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/shape_shop_home"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        app:layout_anchor="@id/viewPager"
+        app:layout_anchorGravity="bottom">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_shop_home_home" />
+
+        <ImageView
+            android:id="@+id/iv_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/iv_home"
+            android:src="@mipmap/ic_shop_home_cl" />
+
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/iv_classify"
+            android:src="@mipmap/ic_shop_home_cart" />
+
+        <TextView
+            android:id="@+id/tv_message_number"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignRight="@id/iv_cart"
+            android:layout_marginRight="-3dp"
+            android:background="@drawable/shape_me_point"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/iv_cart"
+            android:src="@mipmap/ic_shop_home_me" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/shape_shop_home"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        app:layout_anchor="@id/viewPager"
+        app:layout_anchorGravity="bottom">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_shop_home_back" />
+
+        <ImageView
+            android:id="@+id/iv_cart_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:src="@mipmap/ic_shop_home_cart" />
+
+        <TextView
+            android:id="@+id/tv_message_number_2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignRight="@id/iv_cart_2"
+            android:layout_marginRight="-3dp"
+            android:background="@drawable/shape_me_point"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_me_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/iv_cart_2"
+            android:src="@mipmap/ic_shop_home_me" />
+    </RelativeLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar_bg"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:id="@+id/id_shop_home_address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:paddingBottom="12dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="12dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <TextView
+                android:id="@+id/id_shop_home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableRight="@mipmap/ic_shop_home_down"
+                android:maxWidth="250dp"
+                android:singleLine="true"
+                android:text="配送至：- -"
+                android:textColor="@color/black_444444"
+                app:layout_scrollFlags="scroll|snap" />
+
+
+            <ImageView
+                android:id="@+id/iv_title_right_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/ic_order_message" />
+
+            <ImageView
+                android:id="@+id/iv_title_right_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_title_right_message"
+                android:src="@mipmap/ic_order_search" />
+        </RelativeLayout>
+
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

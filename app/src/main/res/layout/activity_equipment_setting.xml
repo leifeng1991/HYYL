@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/vg_id_layout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_equipment_id"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="设备号"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_id_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/ic_scan"
+            android:gravity="right|center_vertical"
+            android:textColor="#FF888888"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:background="#e7e7e7" />
+
+    <LinearLayout
+        android:id="@+id/vg_update_layout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_equipment_update"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="定位更新频率"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_update_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="30s"
+            android:textColor="#FF888888"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:background="#e7e7e7" />
+
+    <LinearLayout
+        android:id="@+id/vg_dzwl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_equipment_dzwl"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="电子围栏"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_dzwl_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="15dp"
+            android:text="关闭"
+            android:drawableRight="@mipmap/ic_right_arrow"
+            android:gravity="right|center_vertical"
+            android:textColor="#FF888888"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:background="#e7e7e7" />
+
+    <LinearLayout
+        android:id="@+id/vg_jjlxr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_equipment_lxr"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="紧急联系人"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/ic_right_arrow" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:background="#e7e7e7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_equipment_sjh"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="设备手机号"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/et_phone_value"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right|center_vertical"
+            android:hint="设置设备手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#444444"
+            android:textColorHint="#888"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:background="#e7e7e7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_summit"
+            style="@style/bigButton"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue_54B1F8"
+            android:text="绑定" />
+
+    </RelativeLayout>
+</LinearLayout>

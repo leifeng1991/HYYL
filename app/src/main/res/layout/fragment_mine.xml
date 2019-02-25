@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/id_top_bg"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_mine_bg" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/id_user_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/id_top_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-40dp" />
+
+            <TextView
+                android:id="@+id/id_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_user_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_9"
+                android:textSize="@dimen/text_size_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_user_name"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/id_children_model"
+                    style="@style/mineTextView"
+                    android:drawableTop="@mipmap/ic_children_model"
+                    android:text="子女模式" />
+
+                <TextView
+                    android:id="@+id/id_remind_set"
+                    style="@style/mineTextView"
+                    android:drawableTop="@mipmap/ic_remind_set"
+                    android:text="提醒设置" />
+
+                <TextView
+                    android:id="@+id/id_my_order"
+                    style="@style/mineTextView"
+                    android:drawableTop="@mipmap/ic_my_order"
+                    android:text="我的订单" />
+
+                <TextView
+                    android:id="@+id/id_electronic_fence"
+                    style="@style/mineTextView"
+                    android:drawableTop="@mipmap/ic_electronic_fence"
+                    android:text="电子围栏" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="32dp"
+                android:text="设置"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17" />
+        </RelativeLayout>
+
+        <View style="@style/HorizontalHalvingLine_5dp" />
+
+        <LinearLayout
+            android:id="@+id/id_health_examination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#FF54B1F8" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@mipmap/ic_more"
+                android:text="体检记录"
+                android:textColor="@color/text_9"
+                android:textSize="@dimen/text_size_15" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_tijianjilu" />
+
+        <View style="@style/HorizontalHalvingLine_1" />
+
+        <View style="@style/HorizontalHalvingLine_5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/id_my_favorite"
+                style="@style/mineTextView"
+                android:drawableTop="@mipmap/ic_my_favorite"
+                android:text="我的收藏" />
+
+            <TextView
+                android:id="@+id/id_browsing_history"
+                style="@style/mineTextView"
+                android:drawableTop="@mipmap/ic_browsing_history"
+                android:text="浏览记录" />
+
+            <TextView
+                android:id="@+id/id_address_administration"
+                style="@style/mineTextView"
+                android:drawableTop="@mipmap/ic_address_administration"
+                android:text="地址管理" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/id_invitation_register"
+                style="@style/mineTextView"
+                android:drawableTop="@mipmap/ic_mine_dzwl"
+                android:text="电子围栏" />
+
+            <TextView
+                android:id="@+id/id_movement_list"
+                style="@style/mineTextView"
+                android:drawableTop="@mipmap/ic_mine_yjfk"
+                android:text="意见反馈" />
+
+            <TextView
+                android:id="@+id/id_service"
+                style="@style/mineTextView"
+                android:drawableTop="@mipmap/ic_service"
+                android:text="华颐客服" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

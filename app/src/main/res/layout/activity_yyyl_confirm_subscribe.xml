@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f2f6"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/horizontallLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/id_service_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF100015"
+            android:textSize="@dimen/text_size_17" />
+
+
+        <TextView
+            android:id="@+id/id_subscribe_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#FF100015"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_service_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#FF100015"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_service_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#FF100015"
+            android:textSize="@dimen/text_size_17" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="20dp"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号："
+            android:textColor="#FF746F6E"
+            android:textSize="@dimen/text_size_17" />
+
+        <EditText
+            android:id="@+id/id_input_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="请输入手机号"
+            android:maxLength="11"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="#FF100015"
+            android:textColorHint="#FF746F6E"
+            android:textSize="@dimen/text_size_17" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="#e4e4e4" />
+
+        <ImageView
+            android:id="@+id/id_edit_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:src="@mipmap/address_edit" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/id_leave_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:hint="如有附加要求请留言（可选）"
+        android:inputType="text"
+        android:minHeight="125dp"
+        android:padding="20dp"
+        android:textColor="#FF100015"
+        android:textColorHint="#c3c3c3"
+        android:textSize="@dimen/text_size_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/id_confirm_subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#54B1F8"
+        android:gravity="center"
+        android:text="确认预约"
+        android:textColor="#FFFFFFFF"
+        android:textSize="@dimen/text_size_17" />
+</LinearLayout>
+

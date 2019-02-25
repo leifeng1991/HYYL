@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_mso_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title_bar" />
+
+        <View style="@style/horizontallLine" />
+
+        <RelativeLayout
+            android:id="@+id/id_as_apply_type_layout"
+            style="@style/applyRefundRl">
+
+            <TextView
+                android:id="@+id/id_as_type_tip"
+                style="@style/applyRefundLeftText" />
+
+            <TextView
+                android:id="@+id/id_as_type"
+                style="@style/applyRefundCenterText"
+                android:layout_toRightOf="@id/id_as_type_tip"
+                android:hint="请选择退货方式" />
+
+            <ImageView style="@style/sureOrderMoreImage" />
+        </RelativeLayout>
+
+        <View style="@style/applyRefundView" />
+
+        <RelativeLayout
+            android:id="@+id/id_as_yy_layout"
+            style="@style/applyRefundRl"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/id_as_yy_tip"
+                style="@style/applyRefundLeftText" />
+
+            <TextView
+                android:id="@+id/id_as_yy"
+                style="@style/applyRefundCenterText"
+                android:layout_toRightOf="@id/id_as_yy_tip" />
+
+            <ImageView style="@style/sureOrderMoreImage" />
+
+            <View
+                style="@style/applyRefundView"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/id_srw_first_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:minHeight="140dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/id_as_sm_tip"
+                    style="@style/applyRefundLeftText"
+                    android:gravity="center_vertical"
+                    android:text="备注：" />
+
+                <EditText
+                    android:id="@+id/id_sm_instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_as_sm_tip"
+                    android:background="@drawable/shape_gray_radius"
+                    android:gravity="top"
+                    android:hint="最多不超过一百字..."
+                    android:maxLength="100"
+                    android:minHeight="100dp"
+                    android:padding="15dp"
+                    android:textColor="@color/text_c3"
+                    android:textColorHint="@color/text_c3"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/id_srw_second_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_gray_radius"
+                android:lineSpacingExtra="1.5mm"
+                android:padding="15dp"
+                android:text="兆邻自营退货提示：\n1.门店营业时间为08:00-19:00，请在此时间段内送至门店\n2.请用户将退货产品交至兆邻门店运营人员，并当面确认"
+                android:textColor="@color/text_8"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/id_srw_third_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/id_srw_order_layout"
+                    style="@style/applyRefundRl">
+
+                    <TextView
+                        android:id="@+id/id_srw_order_tip"
+                        style="@style/applyRefundLeftText" />
+
+                    <EditText
+                        android:id="@+id/id_srw_wl_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/id_srw_order_tip"
+                        android:background="@null"
+                        android:hint="请填写物流单号"
+                        android:textColor="@color/text_7b"
+                        android:textColorHint="@color/text_c0"
+                        android:textSize="@dimen/text_size_14" />
+                </RelativeLayout>
+
+                <View style="@style/applyRefundView" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:minHeight="140dp"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/id_srw_tip"
+                        style="@style/applyRefundLeftText"
+                        android:gravity="center_vertical"
+                        android:text="备注：" />
+
+                    <EditText
+                        android:id="@+id/id_srw_instructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/id_srw_tip"
+                        android:background="@drawable/shape_gray_radius"
+                        android:gravity="top"
+                        android:hint="最多不超过一百字..."
+                        android:maxLength="100"
+                        android:minHeight="100dp"
+                        android:padding="15dp"
+                        android:textColor="@color/text_c3"
+                        android:textColorHint="@color/text_c3"
+                        android:textSize="@dimen/text_size_14" />
+                </RelativeLayout>
+
+                <View style="@style/applyRefundView" />
+
+                <com.xxzlkj.shop.weight.MyImageSelectView
+                    android:id="@+id/myImageSelectView"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="#ffffff"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingTop="20dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_summit"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="46dp"
+        android:background="#FF725C"
+        android:text="提交申请"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</RelativeLayout>

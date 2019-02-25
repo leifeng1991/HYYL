@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_market_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/id_hii_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/id_coverage_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/id_hii_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_hii_text"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="@dimen/text_size_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_hii_text"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/id_hii_price"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/tabIndicatorColor"
+                android:textSize="@dimen/text_size_13"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/id_hii_add"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@id/id_hii_price"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/add_circle"
+                android:visibility="gone" />
+
+            <com.xxzlkj.shop.weight.CustomButton
+                android:id="@+id/id_yushou_btn"
+                android:layout_width="27dp"
+                android:layout_height="13dp"
+                android:layout_alignBottom="@id/id_hii_price"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                app:fb_borderColor="@color/text_price"
+                app:fb_borderWidth="1px"
+                app:fb_defaultColor="@color/white"
+                app:fb_radius="9dp"
+                app:fb_text="预售"
+                app:fb_textColor="@color/text_price"
+                app:fb_textSize="9sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title_bar" />
+
+        <View style="@style/HorizontalHalvingLine_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/pay_type" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="支付方式"
+                android:textColor="@color/text_3a"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalHalvingLine_1" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice"
+            android:paddingLeft="40dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_pad_sure"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_color"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+</RelativeLayout>

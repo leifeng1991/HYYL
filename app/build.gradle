@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def loadProperties() {
+    Properties properties = new Properties()
+    File propertyFile = new File(rootDir.getAbsolutePath() + "/local.properties")
+    properties.load(propertyFile.newDataInputStream())
+    //第一次定义或者设置它的时候需要 ext 前缀,
+    gradle.ext.storeFile = properties.storeFile// 读local.properties这个的storeFile的值
+}
+// 加载版本信息
+loadProperties()
+// 定义是否是测试环境
+def isTest = versions.isTest
+
+android {
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'zhaolin'
+            keyPassword '123456'
+            storeFile file(gradle.storeFile)
+            storePassword '123456'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        // 配置正测试环境
+        // 包名正测试配置
+        applicationId isTest ? "com.xxzlkj.huayiyanglao.test" : "com.xxzlkj.huayiyanglao"
+        // 应用名正测试配置
+        resValue "string", "app_name", isTest ? "华颐养老测试" : "华颐养老"
+        // 小米推送正测试配置
+        buildConfigField "String", "xiaomi_appId", isTest ? '"2882303761517671797"' : '"2882303761517671806"'
+        buildConfigField "String", "xiaomi_appKey", isTest ? '"5361767136797"' : '"5741767193806"'
+        // 网络正测试配置
+        buildConfigField "boolean", "isTest", isTest ? "true" : "false"
+        // 微信正测试配置
+        buildConfigField "String", "wechat_appId", isTest ? '"wx7b2cc9ac778f452b"' : '"wx7b2cc9ac778f452b"'
+        buildConfigField "String", "wechat_appSecret", isTest ? '"1c83ccc6cf3c9df8939674781108cf8e"' : '"1c83ccc6cf3c9df8939674781108cf8e"'
+
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //启用renderscript
+        renderscriptTargetApi  24
+        renderscriptSupportModeEnabled  true
+        multiDexEnabled true
+
+        flavorDimensions "versionCode"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                // 融云正测试配置，替换
+                RONG_CLOUD_APP_KEY_VALUE: isTest ? "3argexb6302ze" : "pwe86ga5pi166",
+                // 高德地图正测试配置
+                GAO_DE_APIKEY_VALUE     : isTest ? "8d588b4639993ff4b926fbcf1d2db5c4" : "3fdd09c8604862f636b60078e555f8ae",
+                // 华为推送正测试配置
+                HUA_WEI_APIID_VALUE     : isTest ? "100143319" : "100143325",
+                // 极光正测试配置
+                JPUSH_PKGNAME           : applicationId,
+                JPUSH_APPKEY            : isTest ? "e1c7bc9c2719357b332648ef" : "117aadb1c6c3ffadd2ffc7dc", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL           : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.releaseConfig
+            // 默认的渠道
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        release {
+            signingConfig signingConfigs.releaseConfig
+
+            minifyEnabled false
+//            shrinkResources true //去除无用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+        yingyongbao {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$versions.supportLibary"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    // ----------------base库--------------------
+    // 基础库
+    compile project(':licallife')
+    compile project(':chat')
+    compile project(':CallLib')
+    // ----------------三方平台库--------------------
+    // 极光
+    compile 'cn.jiguang.sdk:jpush:3.0.8'
+    compile 'cn.jiguang.sdk:jcore:1.1.6'
+    compile 'com.huawei.android.hms:push:2.5.2.300'
+    // 微信支付
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.4.0'
+    // ----------------三方工具库--------------------
+    // 语音转文字
+    compile project(':speech')
+    // 轮播图
+    compile 'com.youth.banner:banner:1.4.9'
+    // 圆的进度条
+    compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+    // recyclerview顶部悬浮
+    compile 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+    // zxing
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    // 仿ios开关
+    compile 'com.github.zcweng:switch-button:0.0.3@aar'
+    // SmartRefreshLayout
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    // 圆角矩形图片
+    compile 'com.makeramen:roundedimageview:2.3.0'
+}

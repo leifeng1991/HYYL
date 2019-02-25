@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#feffff"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="13dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/time_gray"
+            android:drawablePadding="10dp"
+            android:textColor="#FF888888"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待付款"
+            android:textColor="#FF6600"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View style="@style/HorizontalHalvingLine_e8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/id_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/id_image"
+            android:singleLine="true"
+            android:textColor="#FF444444"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_zhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_title"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/id_image"
+            android:singleLine="true"
+            android:textColor="#FF888888"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/id_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/id_image"
+            android:layout_toEndOf="@+id/id_image"
+            android:textColor="#FFFF6600"
+            android:textSize="@dimen/text_size_20" />
+    </RelativeLayout>
+
+    <View style="@style/HorizontalHalvingLine_e8" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp">
+
+        <com.xxzlkj.huayiyanglao.weight.ShapeButton
+            android:id="@+id/id_left_button"
+            android:layout_width="94dp"
+            android:layout_height="29dp"
+            app:fb_borderColor="#999999"
+            app:fb_borderWidth="1px"
+            app:fb_defaultColor="@color/white"
+            app:fb_radius="3dp"
+            app:fb_textColor="@color/text_6"
+            app:fb_textSize="@dimen/text_size_17"
+            android:visibility="gone"/>
+
+        <com.xxzlkj.huayiyanglao.weight.ShapeButton
+            android:id="@+id/id_right_button"
+            android:layout_width="94dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="10dp"
+            app:fb_borderColor="#54B1F8 "
+            app:fb_borderWidth="1px"
+            app:fb_defaultColor="@color/white"
+            app:fb_radius="3dp"
+            app:fb_textColor="#54B1F8"
+            app:fb_textSize="@dimen/text_size_17"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/HorizontalHalvingLine_5dp" />
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="24dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/iv_order_des_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_des_date"
+                style="@style/tv_14sp_9c9c9c"
+                android:singleLine="true"
+                android:text="服务时间：——" />
+
+            <TextView
+                android:id="@+id/tv_order_des_time"
+                style="@style/tv_14sp_9c9c9c"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="服务时长：——" />
+
+            <TextView
+                android:id="@+id/tv_order_des_project"
+                style="@style/tv_14sp_9c9c9c"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="服务项目：——" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_order_des_shop"
+                    style="@style/tv_14sp_9c9c9c"
+                    android:layout_width="match_parent"
+                    android:layout_toLeftOf="@+id/tv_order_des_money"
+                    android:singleLine="true"
+                    android:text="所属商家：——" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_des_money"
+                    style="@style/tv_14sp_9c9c9c"
+                    android:layout_alignBottom="@id/tv_order_des_money"
+                    android:layout_alignParentRight="true"
+                    android:text="¥ 52"
+                    android:textColor="@color/orange_ff725c" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/lineHorizontalOrder"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+
+
+</LinearLayout>

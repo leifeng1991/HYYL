@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/title_bar_bg"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <ImageView
+            android:id="@+id/id_gl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:src="@mipmap/ic_back" />
+
+        <LinearLayout
+            android:id="@+id/id_gl_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/id_gl_gouwuche"
+            android:layout_toRightOf="@id/id_gl_back"
+            android:background="@drawable/shape_search_radius_gray"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/search_icon" />
+
+            <TextView
+                android:id="@+id/id_input_tip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="请输入关键字…"
+                android:textColor="#808080"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <!-- <android.support.v7.widget.SearchView
+             android:id="@+id/id_gl_search"
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="8dp"
+             android:layout_toLeftOf="@+id/id_gl_gouwuche"
+             android:layout_toRightOf="@id/id_gl_back"
+             android:background="@drawable/shape_search_radius_gray"
+             app:searchHintIcon="@mipmap/search_icon"
+             app:searchIcon="@mipmap/search_icon"
+             app:defaultQueryHint="请输入关键字…"
+             android:queryHint="请输入关键字…"/>-->
+
+        <ImageView
+            android:id="@+id/id_gl_gouwuche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/id_gl_lg"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/gouwuche_icon" />
+
+        <TextView
+            android:id="@+id/id_gl_number"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/id_gl_lg"
+            android:background="@drawable/shape_me_point"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/id_gl_lg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="17.5dp"
+            android:src="@mipmap/menu_list" />
+    </RelativeLayout>
+
+    <View style="@style/horizontallLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_gl_layout_1"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_gl_text_1"
+                style="@style/goodsListTv" />
+
+            <ImageView
+                android:id="@+id/id_gl_image_1"
+                style="@style/goodsListIv"
+                android:src="@mipmap/top_arrow_gray" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_gl_layout_2"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_gl_text_2"
+                style="@style/goodsListTv"
+                android:text="销量" />
+
+            <ImageView
+                android:id="@+id/id_gl_image_2"
+                style="@style/goodsListIv" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_gl_layout_3"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_gl_text_3"
+                style="@style/goodsListTv"
+                android:text="价格" />
+
+            <ImageView
+                android:id="@+id/id_gl_image_3"
+                style="@style/goodsListIv" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_gl_layout_4"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_gl_text_4"
+                style="@style/goodsListTv"
+                android:text="活动" />
+
+            <ImageView
+                android:id="@+id/id_gl_image_4"
+                style="@style/goodsListIv" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/horizontallLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.xxzlkj.zhaolinshare.base.MyRecyclerView
+            android:id="@+id/id_gl_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:visibility="gone" />
+
+        <com.xxzlkj.shop.weight.CustomScrollView
+            android:id="@+id/id_gl_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/id_gl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:background="@color/line_f126">
+
+                    <ImageView
+                        android:id="@+id/id_gl_gwc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/search_no_result" />
+
+                    <TextView
+                        android:id="@+id/id_gl_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_gl_gwc"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="没有找到你要找的商品"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_gl_tip"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="试试"
+                            android:textColor="@color/text_af"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:id="@+id/id_gl_go"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="其他关键字"
+                            android:textColor="@color/text_blue"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="吧！"
+                            android:textColor="@color/text_af"
+                            android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:background="@color/line_f126"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <View
+                        style="@style/horizontallLine"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/line_b7" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:text="为你推荐"
+                        android:textColor="@color/text_b6"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <View
+                        style="@style/horizontallLine"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/line_b7" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/id_gl_recommend_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </com.xxzlkj.shop.weight.CustomScrollView>
+
+        <RelativeLayout
+            android:id="@+id/id_gl_alph_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/id_found_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_found_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_3a"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/id_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+
+                <TextView
+                    android:id="@+id/id_found_location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@mipmap/location"
+                    android:drawablePadding="3dp"
+                    android:textColor="@color/text_8"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/id_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_found_browser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@mipmap/time_gray"
+                    android:drawablePadding="3dp"
+                    android:textColor="@color/text_9"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/id_found_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:drawableLeft="@mipmap/browsing"
+                    android:drawablePadding="3dp"
+                    android:textColor="@color/text_9"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RelativeLayout
+                    android:id="@+id/id_found_collect_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp">
+
+                    <ImageView
+                        android:id="@+id/id_found_collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/collect_gray" />
+
+                    <TextView
+                        android:id="@+id/id_found_cell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/id_found_collect"
+                        android:textColor="@color/text_9"
+                        android:textSize="@dimen/text_size_14" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_found_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <View
+                style="@style/verticalLine"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="89dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已报名"
+                    android:textColor="@color/text_746f6e"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/id_found_sign_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_746f6e"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/id_found_view"
+        style="@style/line_10dp" />
+</LinearLayout>

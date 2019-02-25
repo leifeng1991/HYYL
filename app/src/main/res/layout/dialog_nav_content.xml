@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="路线规划" />
+
+    <View style="@style/horizontallLine" />
+
+    <View style="@style/horizontallLine" />
+
+    <TextView
+        android:id="@+id/id_nc_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="驾车" />
+
+    <View style="@style/horizontallLine" />
+
+    <TextView
+        android:id="@+id/id_nc_2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="骑行" />
+
+    <View style="@style/horizontallLine" />
+
+    <TextView
+        android:id="@+id/id_nc_3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="步行" />
+
+    <View style="@style/horizontallLine" />
+</LinearLayout>

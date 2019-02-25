@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--高度 415px-->
+    <com.xxzlkj.shop.weight.BannerView
+        android:id="@+id/id_banner"
+        android:layout_width="match_parent"
+        android:layout_height="208dp" />
+</LinearLayout>

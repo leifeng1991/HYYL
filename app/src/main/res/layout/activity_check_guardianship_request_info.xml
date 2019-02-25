@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/id_user_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+
+        <TextView
+            android:id="@+id/id_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/id_user_avatar"
+            android:singleLine="true"
+            android:textColor="#FF444444"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/id_real_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_nick"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/id_user_avatar"
+            android:singleLine="true"
+            android:textColor="#FF999999"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/id_contact_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_real_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/id_user_avatar"
+            android:textColor="#FF999999"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_1px"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.xxzlkj.huayiyanglao.weight.ShapeButton
+            android:id="@+id/id_refuse"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            app:fb_defaultColor="#82CE2E "
+            app:fb_radius="4dp"
+            app:fb_text="拒绝"
+            app:fb_textColor="@color/white"
+            app:fb_textSize="@dimen/text_size_17" />
+
+        <com.xxzlkj.huayiyanglao.weight.ShapeButton
+            android:id="@+id/id_receiver"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            app:fb_defaultColor="#54B1F8"
+            app:fb_radius="4dp"
+            app:fb_text="接受"
+            app:fb_textColor="@color/white"
+            app:fb_textSize="@dimen/text_size_17" />
+    </LinearLayout>
+</LinearLayout>

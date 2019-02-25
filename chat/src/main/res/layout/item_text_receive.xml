@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 显示时间 -->
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/sessionTextViewTime"
+        android:text="下午 5点" />
+
+    <LinearLayout style="@style/sessionLinearLayoutUserInfo">
+        <!-- 人物头像 -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            style="@style/sessionImageViewAvatar" />
+
+        <!-- 昵称，当在群组中则要显示 -->
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/sessionTextViewName"
+            android:layout_marginLeft="15dp"
+            android:text="CSDN_LQR" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/sessionLinearLayoutMessage">
+
+
+        <TextView
+            android:id="@+id/tvText"
+            style="@style/sessionTextViewMessage"
+            android:background="@drawable/ic_session_left"
+            android:text="嗯嗯嗯嗯嗯嗯" />
+
+        <ProgressBar
+            android:id="@+id/pbSending"
+            style="@style/sessionProgressBar" />
+        <!-- 重试 -->
+        <include layout="@layout/layout_session_error" />
+
+    </LinearLayout>
+
+</LinearLayout>

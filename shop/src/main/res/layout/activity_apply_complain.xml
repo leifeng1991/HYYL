@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/item_apply_refund"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_14sp_3a3a3a"
+                    android:text="请选择投诉原因"
+                    android:textSize="18sp" />
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/id_flowlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:max_select="-1" />
+            </LinearLayout>
+
+
+            <View style="@style/lineHorizontalOrder" />
+
+            <LinearLayout style="@style/item_apply_refund">
+
+                <TextView
+                    style="@style/tv_14sp_484848"
+                    android:text="备注："
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape_rectangle_f5f6f8"
+                    android:gravity="top"
+                    android:hint="最多不超过100字…"
+                    android:maxLength="100"
+                    android:padding="15dp"
+                    android:textColor="@color/gray_7B7B7B"
+                    android:textColorHint="@color/gray_c0c0c0"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View style="@style/lineHorizontalOrder" />
+
+            <com.xxzlkj.shop.weight.MyImageSelectView
+                android:id="@+id/myImageSelectView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/btn_summit"
+                android:layout_width="233dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="46dp"
+                android:background="#FF725C"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

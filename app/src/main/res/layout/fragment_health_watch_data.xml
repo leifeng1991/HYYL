@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/id_tip"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ECF7FF"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="#54B1F8"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/id_has_arrow_tip"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ECF7FF"
+            android:drawableRight="@mipmap/ic_blue_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:textColor="#54B1F8"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            style="@style/RLHealthDataItem"
+            android:paddingLeft="0dp">
+
+            <View
+                android:id="@+id/id_gao_ya_line"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#D982CE2E"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/HealthDataItemName"
+                android:paddingLeft="18dp"
+                android:text="高压" />
+
+            <TextView
+                android:id="@+id/tv_gaoya"
+                style="@style/HealthDataItemValue" />
+
+        </RelativeLayout>
+
+        <View style="@style/HealthDataLine" />
+
+        <RelativeLayout
+            style="@style/RLHealthDataItem"
+            android:paddingLeft="0dp">
+
+            <View
+                android:id="@+id/id_di_ya_line"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#D982CE2E"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/HealthDataItemName"
+                android:paddingLeft="18dp"
+                android:text="低压" />
+
+            <TextView
+                android:id="@+id/tv_diya"
+                style="@style/HealthDataItemValue" />
+
+        </RelativeLayout>
+
+        <View style="@style/HealthDataLine" />
+
+        <RelativeLayout
+            style="@style/RLHealthDataItem"
+            android:paddingLeft="0dp">
+
+            <View
+                android:id="@+id/id_xin_lv_line"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#D982CE2E"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/HealthDataItemName"
+                android:paddingLeft="18dp"
+                android:text="心率" />
+
+            <TextView
+                android:id="@+id/tv_mailv"
+                style="@style/HealthDataItemValue" />
+
+        </RelativeLayout>
+
+        <View style="@style/HealthDataLine" />
+
+        <RelativeLayout
+            style="@style/RLHealthDataItem"
+            android:paddingLeft="0dp">
+
+            <View
+                android:id="@+id/id_xue_tang_line"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#D982CE2E"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/HealthDataItemName"
+                android:paddingLeft="18dp"
+                android:text="血糖" />
+
+            <TextView
+                android:id="@+id/tv_xuetang"
+                style="@style/HealthDataItemValue" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

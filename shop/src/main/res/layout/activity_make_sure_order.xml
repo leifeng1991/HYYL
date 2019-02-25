@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_mso_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/layout_title_bar" />
+
+    <View
+        android:id="@+id/id_mso_line"
+        style="@style/horizontallLine"
+        android:layout_below="@id/titleBar" />
+
+    <com.xxzlkj.shop.weight.CustomScrollView
+        android:id="@+id/id_mso_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/id_mso_line"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/id_mso_address_mananger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/id_mso_location_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@mipmap/location_icon" />
+
+                <TextView
+                    android:id="@+id/id_mso_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/id_mso_location_image"
+                    android:singleLine="true"
+                    android:textColor="@color/text_3a"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/id_mso_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@id/id_mso_name"
+                    android:singleLine="true"
+                    android:textColor="@color/text_3a"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/id_mso_default"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/id_mso_phone"
+                    android:background="@drawable/shape_orange_corners"
+                    android:gravity="center"
+                    android:text="默认"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_10" />
+
+                <ImageView
+                    android:id="@+id/id_mso_more"
+                    style="@style/sureOrderMoreImage" />
+
+                <TextView
+                    android:id="@+id/id_mso_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_mso_location_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@id/id_mso_more"
+                    android:layout_toRightOf="@id/id_mso_location_image"
+                    android:textColor="@color/text_95"
+                    android:textSize="@dimen/text_size_13" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_no_address_layout"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:background="@color/white"
+                android:paddingTop="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="你还没有收货地址"
+                    android:textColor="@color/text_price"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:id="@+id/id_mso_more_1"
+                    style="@style/sureOrderMoreImage" />
+            </RelativeLayout>
+
+            <View style="@style/line_5dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/id_mso_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/id_mso_zfps"
+                style="@style/sureOrderRl">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="支付配送"
+                    android:textColor="@color/text_6"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:id="@+id/id_mso_more_zhipei"
+                    style="@style/sureOrderMoreImage" />
+
+                <TextView
+                    android:id="@+id/id_mso_lift"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/id_mso_more_zhipei"
+                    android:background="@drawable/shape_gray_stroke_777777"
+                    android:gravity="center"
+                    android:text="兆邻配送"
+                    android:textColor="@color/text_01"
+                    android:textSize="@dimen/text_size_10" />
+
+                <TextView
+                    android:id="@+id/id_mso_online"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_alignTop="@+id/id_mso_lift"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/id_mso_lift"
+                    android:background="@drawable/shape_gray_stroke_777777"
+                    android:gravity="center"
+                    android:text="在线支付"
+                    android:textColor="@color/text_01"
+                    android:textSize="@dimen/text_size_10" />
+            </RelativeLayout>
+
+            <View style="@style/line_5dp" />
+
+            <RelativeLayout
+                style="@style/sureOrderRl"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/sureOrderText"
+                    android:text="发票信息"
+                    android:textColor="@color/text_222833" />
+
+                <CheckBox
+                    android:id="@+id/id_mso_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:background="@null"
+                    android:button="@drawable/selector_checked_bg" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/id_mso_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_marginLeft="25dp" />
+
+                <RelativeLayout
+                    android:id="@+id/id_mso_type"
+                    style="@style/sureOrderRl">
+
+                    <TextView
+                        style="@style/sureOrderText"
+                        android:text="发票类型" />
+
+                    <TextView
+                        android:id="@+id/id_mso_fp_type"
+                        style="@style/sureOrderTextContent"
+                        android:layout_toLeftOf="@+id/id_mso_right_1"
+                        android:text="电子发票" />
+
+                    <ImageView
+                        android:id="@+id/id_mso_right_1"
+                        style="@style/sureOrderMoreImage" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" />
+
+                <RelativeLayout
+                    android:id="@+id/id_mso_content"
+                    style="@style/sureOrderRl">
+
+                    <TextView
+                        style="@style/sureOrderText"
+                        android:text="发票内容" />
+
+                    <TextView
+                        android:id="@+id/id_mso_fp_content"
+                        style="@style/sureOrderTextContent"
+                        android:layout_toLeftOf="@+id/id_mso_right_2"
+                        android:text="食品" />
+
+                    <ImageView
+                        android:id="@+id/id_mso_right_2"
+                        style="@style/sureOrderMoreImage" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" />
+
+                <RelativeLayout style="@style/sureOrderRl">
+
+                    <TextView
+                        android:id="@+id/id_text"
+                        style="@style/sureOrderText"
+                        android:text="发票抬头" />
+
+                    <EditText
+                        android:id="@+id/id_mso_et"
+                        style="@style/sureOrderTextContent"
+                        android:layout_width="match_parent"
+                        android:layout_toLeftOf="@+id/id_mso_right_3"
+                        android:layout_toRightOf="@id/id_text"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="个人" />
+
+                    <ImageView
+                        android:id="@+id/id_mso_right_3"
+                        style="@style/sureOrderMoreImage"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_mso_coupons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/sureOrderRl">
+
+                    <TextView
+                        android:id="@+id/id_mso_coupons_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="优惠券"
+                        android:textColor="@color/text_6"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/id_mso_coupons_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/id_mso_coupons_tip"
+                        android:background="@drawable/shape_orange_stroke_5"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="已选1张"
+                        android:textColor="@color/text_price"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/id_mso_more_coupons"
+                        style="@style/sureOrderMoreImage" />
+
+                    <TextView
+                        android:id="@+id/id_mso_coupons_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/id_mso_more_coupons"
+                        android:gravity="center"
+                        android:textColor="@color/text_yellow"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/id_mso_coupons_can_use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@id/id_mso_more_coupons"
+                        android:background="@drawable/shape_orange_stroke_5"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="可用优惠券"
+                        android:textColor="@color/text_price"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <View style="@style/line_5dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/sureOrderTextTitle"
+                        android:text="商品总额" />
+
+                    <TextView
+                        style="@style/sureOrderTextTitle"
+                        android:text="运费"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/id_mso_tip_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="立减"
+                            android:textColor="@color/text_222833"
+                            android:textSize="@dimen/text_size_15" />
+
+                        <TextView
+                            android:id="@+id/id_mso_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/id_mso_tip_1"
+                            android:background="@drawable/shape_buy_now"
+                            android:gravity="center"
+                            android:minEms="4"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_11"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_mso_total_price"
+                        style="@style/sureOrderTextTitle"
+                        android:textColor="@color/text_price" />
+
+                    <TextView
+                        android:id="@+id/id_mso_add_price"
+                        style="@style/sureOrderTextTitle"
+                        android:text="+￥0.00"
+                        android:textColor="@color/text_price"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/id_mso_reduce_price"
+                        style="@style/sureOrderTextTitle"
+                        android:text="-￥0.00"
+                        android:textColor="@color/text_price"
+                        android:textSize="@dimen/text_size_15" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View style="@style/line_5dp" />
+
+            <EditText
+                android:id="@+id/id_mso_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@null"
+                android:hint="选填:给商家留言（45字内）"
+                android:maxLength="45"
+                android:minHeight="45dp"
+                android:textColorHint="@color/text_ad"
+                android:textSize="@dimen/text_size_15" />
+
+            <View style="@style/line_5dp" />
+        </LinearLayout>
+    </com.xxzlkj.shop.weight.CustomScrollView>
+
+    <View
+        android:id="@+id/view"
+        style="@style/line_bottom_top"
+        android:layout_alignTop="@+id/id_mso_bottom" />
+
+    <RelativeLayout
+        android:id="@+id/id_mso_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backgroud_f2">
+
+        <TextView
+            android:id="@+id/id_mso_tip"
+            style="@style/sureOrderTextTitle"
+            android:layout_marginLeft="25dp"
+            android:text="商品总额：" />
+
+        <TextView
+            android:id="@+id/id_mso_tp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_mso_tip"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/id_mso_order_now"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/text_price"
+            android:gravity="center"
+            android:text="立即下单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/id_mso_coupons_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="208dp"
+        android:src="@drawable/favourable" />
+</RelativeLayout>

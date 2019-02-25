@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_person_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <View style="@style/horizontallLine" />
+
+            <View style="@style/line_10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:id="@+id/id_pi_tv1"
+                    style="@style/personLeftText"
+                    android:text="头像" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/id_pi_usericon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <View style="@style/line_10dp" />
+
+            <RelativeLayout style="@style/personRl">
+
+                <TextView
+                    android:id="@+id/id_pi_tv3"
+                    style="@style/personLeftText"
+                    android:text="ID" />
+
+                <TextView
+                    android:id="@+id/id_pi_idcard"
+                    style="@style/personCenterText"
+                    android:layout_toRightOf="@+id/id_pi_tv3" />
+            </RelativeLayout>
+
+            <View
+                style="@style/horizontallLine"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout style="@style/personRl">
+
+                <TextView
+                    android:id="@+id/id_pi_tv2"
+                    style="@style/personLeftText"
+                    android:text="昵称" />
+
+                <EditText
+                    android:id="@+id/id_pi_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/id_pi_tv2"
+                    android:background="@null"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textColor="@color/text_6"
+                    android:textSize="@dimen/text_size_14" />
+            </RelativeLayout>
+
+            <View
+                style="@style/horizontallLine"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/id_pi_sex_layout"
+                style="@style/personRl">
+
+                <TextView
+                    android:id="@+id/id_pi_sex_title"
+                    style="@style/personLeftText"
+                    android:text="性别" />
+
+                <TextView
+                    android:id="@+id/id_pi_sex_content"
+                    style="@style/personCenterText"
+                    android:layout_toRightOf="@+id/id_pi_sex_title" />
+
+                <ImageView style="@style/personRightImage" />
+            </RelativeLayout>
+
+            <View
+                style="@style/horizontallLine"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/id_pi_birthday_layout"
+                style="@style/personRl">
+
+                <TextView
+                    android:id="@+id/id_pi_birthday_title"
+                    style="@style/personLeftText"
+                    android:text="生日" />
+
+                <TextView
+                    android:id="@+id/id_pi_birthday_content"
+                    style="@style/personCenterText"
+                    android:layout_toRightOf="@+id/id_pi_birthday_title" />
+
+                <ImageView style="@style/personRightImage" />
+            </RelativeLayout>
+
+            <View
+                style="@style/horizontallLine"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout style="@style/personRl">
+
+                <TextView
+                    style="@style/personLeftText"
+                    android:text="简介" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/id_pi_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/shape_gray_radius"
+                android:gravity="left|top"
+                android:hint="最多不超过50字..."
+                android:maxLength="50"
+                android:minHeight="70dp"
+                android:padding="15dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/text_c3"
+                android:textSize="@dimen/text_size_14" />
+
+            <View style="@style/line_10dp" />
+
+            <RelativeLayout style="@style/personRl">
+
+                <TextView
+                    android:id="@+id/id_pi_tv4"
+                    style="@style/personLeftText"
+                    android:text="注册时间" />
+
+                <TextView
+                    android:id="@+id/id_pi_register_time"
+                    style="@style/personCenterText"
+                    android:layout_toRightOf="@+id/id_pi_tv4" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

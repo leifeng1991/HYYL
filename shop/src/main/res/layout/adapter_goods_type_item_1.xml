@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/id_gti_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/id_gti_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_gti_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:ems="5"
+        android:maxLines="1"
+        android:textColor="@color/text_6"
+        android:textSize="@dimen/text_size_10" />
+
+    <TextView
+        android:id="@+id/id_gti_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/id_gti_name"
+        android:layout_below="@id/id_gti_name"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text_price"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/id_gti_line_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/id_gti_price"
+        android:layout_below="@id/id_gti_name"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/id_gti_price"
+        android:textColor="@color/text_ac"
+        android:textSize="7.5sp" />
+</RelativeLayout>

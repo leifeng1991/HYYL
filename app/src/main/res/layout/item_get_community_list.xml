@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/iv_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="振武家园小区"
+            android:textColor="@color/black_444444"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="地址：北京市朝阳区三里河一区1号楼就会加快底商"
+            android:textColor="@color/black_444444"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_open_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:text="已开通服务：在线商城、本地生活、物业管理..."
+            android:textColor="@color/black_444444"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

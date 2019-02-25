@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CallLib/CallLib.iml" filepath="$PROJECT_DIR$/CallLib/CallLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HYYL.iml" filepath="$PROJECT_DIR$/HYYL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RongIMLib/RongIMLib.iml" filepath="$PROJECT_DIR$/RongIMLib/RongIMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/licallife/licallife.iml" filepath="$PROJECT_DIR$/licallife/licallife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multi-image-selector/multi-image-selector.iml" filepath="$PROJECT_DIR$/multi-image-selector/multi-image-selector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qcloud_wxyt/qcloud_wxyt.iml" filepath="$PROJECT_DIR$/qcloud_wxyt/qcloud_wxyt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop/shop.iml" filepath="$PROJECT_DIR$/shop/shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/speech/speech.iml" filepath="$PROJECT_DIR$/speech/speech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" filepath="$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" />
+    </modules>
+  </component>
+</project>

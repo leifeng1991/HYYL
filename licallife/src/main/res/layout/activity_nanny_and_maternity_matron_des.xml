@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white_ebebeb"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nev_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_f8f9fa"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="match_parent"
+                android:layout_height="375dp" />
+
+            <com.wonderkiln.blurkit.BlurLayout
+                android:id="@+id/blurLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dp"
+                app:blurRadius="20"
+                app:downscaleFactor="0.17"
+                app:fps="0">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="#fff" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginRight="29dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_555555"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:textColor="@color/gray_555555"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </com.wonderkiln.blurkit.BlurLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_background_des"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_rectangle_des_top"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="17dp"
+                        android:layout_marginTop="17dp">
+
+                        <TextView
+                            android:id="@+id/tv_high_praise"
+                            style="@style/NannyAndMaternityMatronDesItem" />
+
+                        <TextView
+                            android:id="@+id/tv_experience"
+                            style="@style/NannyAndMaternityMatronDesItem" />
+
+                        <TextView
+                            android:id="@+id/tv_monthly_salary"
+                            style="@style/NannyAndMaternityMatronDesItem" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/lineHorizontalOrder"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginRight="14dp" />
+
+                    <include layout="@layout/view_about_time_layout" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_all_days"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="246"
+                            android:paddingLeft="15dp"
+                            android:text="总在岗- -天"
+                            android:textColor="@color/black_746f6e"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sale_num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="160"
+                            android:drawableLeft="@drawable/shape_point_4990e2"
+                            android:drawablePadding="5dp"
+                            android:maxLines="1"
+                            android:text="预约- -次"
+                            android:textColor="@color/black_746f6e"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pv_num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="160"
+                            android:drawableLeft="@drawable/shape_point_bd0fe1"
+                            android:drawablePadding="5dp"
+                            android:singleLine="true"
+                            android:text="浏览- -次"
+                            android:textColor="@color/black_746f6e"
+                            android:textSize="12sp" />
+
+                        <View
+                            style="@style/verticalLine"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/id_juli"
+                            android:layout_width="71dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="- -km"
+                            android:textColor="@color/black_746f6e"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/lineHorizontalOrder"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginRight="14dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView_tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="19dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="14dp"
+                            android:paddingTop="19dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_certificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            style="@style/lineHorizontalOrder"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginRight="14dp" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView_certificate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:tabBackground="@drawable/selector_nanny_and_maternity_matron_tab"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabTextColor="#211D1D">
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基本信息" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="工作信息" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训信息" />
+
+                </android.support.design.widget.TabLayout>
+
+                <FrameLayout
+                    android:id="@+id/tabContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:id="@+id/ll_id_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="14dp"
+                        android:paddingTop="15dp"
+                        android:text="证件照片"
+                        android:textColor="@color/black_222833"
+                        android:textSize="14sp" />
+
+                    <View
+                        style="@style/lineHorizontalOrder"
+                        android:layout_marginLeft="10dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_id_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_recommend_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="14dp"
+                        android:paddingTop="15dp"
+                        android:text="类似月嫂推荐"
+                        android:textColor="@color/black_222833"
+                        android:textSize="14sp" />
+
+                    <View
+                        style="@style/lineHorizontalOrder"
+                        android:layout_marginLeft="10dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backgroud_f2"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="36dp"
+            android:drawableLeft="@mipmap/ic_kefu"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="客服"
+            android:textColor="@color/orange_ff725c"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_subscribe"
+            style="@style/bigButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:text="立即预约" />
+
+    </LinearLayout>
+
+    <include layout="@layout/toolbar_layout_2" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_main_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bingoogolapple.qrcode.zxing.ZXingView
+        android:id="@+id/zxingview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText="将条码放入框内，即可自动扫描"
+        app:qrcv_barcodeRectHeight="140dp"
+        app:qrcv_borderColor="@android:color/white"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/orange_ff725c"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_customScanLineDrawable="@mipmap/scan_icon_scanline"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isCenterVertical="true"
+        app:qrcv_isOnlyDecodeScanBoxArea="false"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowTipBackground="true"
+        app:qrcv_isShowTipTextAsSingleLine="true"
+        app:qrcv_isTipTextBelowRect="false"
+        app:qrcv_maskColor="#45000000"
+        app:qrcv_qrCodeTipText="请将条形码/二维码置于方框内"
+        app:qrcv_rectWidth="200dp"
+        app:qrcv_scanLineColor="@color/orange_ff725c"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="0.5dp"
+        app:qrcv_tipTextColor="@android:color/white"
+        app:qrcv_tipTextSize="15sp"
+        app:qrcv_toolbarHeight="0dp"
+        app:qrcv_topOffset="90dp" />
+
+    <include layout="@layout/layout_title_bar" />
+
+</RelativeLayout>

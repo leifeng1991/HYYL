@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_mso_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/content_bg_zhaolin"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title_bar" />
+
+        <View style="@style/horizontallLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_pay_zf_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/zhifu_type" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/id_pay_zf_image"
+                    android:text="支付方式"
+                    android:textColor="@color/text_3a"
+                    android:textSize="@dimen/text_size_18" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_pay_online"
+                    style="@style/padText"
+                    android:text="在线支付" />
+
+                <TextView
+                    android:id="@+id/id_pay_delivery"
+                    style="@style/padText"
+                    android:text="货到付款"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/horizontallLine"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_pay_ps_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/peisong_type" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/id_pay_ps_image"
+                    android:text="配送方式"
+                    android:textColor="@color/text_3a"
+                    android:textSize="@dimen/text_size_18" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_pay_zl"
+                    style="@style/padText"
+                    android:text="兆邻配送" />
+
+                <TextView
+                    android:id="@+id/id_pay_zq"
+                    style="@style/padText"
+                    android:text="门店自提" />
+
+                <TextView
+                    android:id="@+id/id_pay_kd"
+                    style="@style/padText"
+                    android:text="快递配送"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/horizontallLine"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp" />
+
+        <LinearLayout
+            android:id="@+id/id_zt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/id_ztdd_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/id_ztdd_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="自提地点"
+                        android:textColor="@color/text_48"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/id_ztdd_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@id/id_ztdd_tv"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_7b"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <ImageView
+                        style="@style/sureOrderMoreImage"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ztsj_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/id_ztsj_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="自提时间"
+                        android:textColor="@color/text_48"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <TextView
+                        android:id="@+id/id_ztsj_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@id/id_ztsj_tv"
+                        android:gravity="center"
+                        android:textColor="@color/text_7b"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <ImageView
+                        style="@style/sureOrderMoreImage"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_pad_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/id_pad_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="送货时间"
+                android:textColor="@color/text_48"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/id_pad_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/id_pad_tv"
+                android:gravity="center"
+                android:text="即刻送货上门"
+                android:textColor="@color/text_7b"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView style="@style/sureOrderMoreImage" />
+
+            <View
+                style="@style/horizontallLine"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_pad_sure"
+        android:layout_width="278dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/shape_buy_now"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+</RelativeLayout>

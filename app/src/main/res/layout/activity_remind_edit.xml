@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_remind_edit_yao"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:text="药品名称"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="输入药品名称"
+            android:singleLine="true"
+            android:textColor="#FF888888"
+            android:textColorHint="#FFBBBBBB"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View style="@style/horizontallLine_e7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_remind_edit_time"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:text="吃药时间"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/ic_right_arrow"
+            android:gravity="right|center"
+            android:singleLine="true"
+            android:text="08:00"
+            android:textColor="#FF888888"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View style="@style/horizontallLine_e7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_remind_edit_cf"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:text="重复"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/ic_right_arrow"
+            android:gravity="right|center"
+            android:singleLine="true"
+            android:text="每天"
+            android:textColor="#FF888888"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View style="@style/horizontallLine_e7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_remind_edit_jl"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:text="计量"
+            android:textColor="#FF444444"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:singleLine="true"
+            android:text="1片"
+            android:textColor="#FF888888"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <View style="@style/horizontallLine_e7" />
+</LinearLayout>

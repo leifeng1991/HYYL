@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/id_about_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可约时间"
+            android:textColor="@color/text_222833"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/id_right_arrow"
+            android:text="查看未来7天"
+            android:textColor="@color/text_746f6e"
+            android:textSize="@dimen/text_size_11" />
+
+        <ImageView
+            android:id="@+id/id_right_arrow"
+            style="@style/subscribeRightIv" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/view_about_time_1" />
+
+            <LinearLayout
+                android:id="@+id/id_time_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_schedule_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="#FFE5E5E5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="不可约"
+                    android:textColor="#FF746F6E"
+                    android:textSize="@dimen/text_size_11" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="#FFFFC668" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="可约"
+                    android:textColor="#FF746F6E"
+                    android:textSize="@dimen/text_size_11" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View style="@style/horizontallLine"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+</LinearLayout>

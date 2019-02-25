@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <View style="@style/line_5dp" />
+
+    <include layout="@layout/adapter_shop_home_title_1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_title_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_content_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp" />
+</LinearLayout>

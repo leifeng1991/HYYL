@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item_coupons"
+        android:layout_width="match_parent"
+        android:layout_height="119dp"
+        android:layout_marginLeft="@dimen/item_coupons_margin"
+        android:layout_marginRight="@dimen/item_coupons_margin"
+        android:layout_marginTop="10dp"
+        android:weightSum="711">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="240"
+            android:background="@mipmap/ic_coupons_item_blue"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="471"
+            android:background="@mipmap/ic_coupons_item_right"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="仅限商城使用"
+                android:textColor="@color/black_444444"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="仅限2017.04.01-2017.04.03使用"
+                android:textColor="@color/black_999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="7dp"
+                android:singleLine="true"
+                android:text="满0元可用"
+                android:textColor="@color/orange_ff725c"
+                android:textSize="12sp" />
+
+            <CheckBox
+                android:id="@+id/cb_is_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_available"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:button="@drawable/selector_checked_bg" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

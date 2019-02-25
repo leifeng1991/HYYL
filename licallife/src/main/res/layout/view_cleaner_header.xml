@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xxzlkj.shop.weight.BannerView
+        android:id="@+id/id_jz_clean_banner"
+        android:layout_width="match_parent"
+        android:layout_height="208dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_first_layout"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_first_text"
+                style="@style/goodsListTv"
+                android:text="收费均价" />
+
+            <ImageView
+                android:id="@+id/id_first_image"
+                style="@style/goodsListIv"
+                android:src="@mipmap/top_arrow_gray" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_second_layout"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_second_text"
+                style="@style/goodsListTv"
+                android:text="满意度" />
+
+            <ImageView
+                android:id="@+id/id_second_image"
+                style="@style/goodsListIv" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_third_layout"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_third_text"
+                style="@style/goodsListTv"
+                android:text="成交量" />
+
+            <ImageView
+                android:id="@+id/id_third_image"
+                style="@style/goodsListIv" />
+        </LinearLayout>
+
+        <View
+            style="@style/verticalLine"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/id_four_layout"
+            style="@style/goodsListLl">
+
+            <TextView
+                android:id="@+id/id_four_text"
+                style="@style/goodsListTv"
+                android:text="星级" />
+
+            <ImageView
+                android:id="@+id/id_four_image"
+                style="@style/goodsListIv" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/horizontallLine" />
+
+</LinearLayout>

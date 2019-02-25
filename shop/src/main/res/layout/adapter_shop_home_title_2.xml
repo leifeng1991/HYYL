@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <View style="@style/line_5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+
+        <ImageView
+            android:id="@+id/id_sht_image"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/hot_booking" />
+
+        <TextView
+            android:id="@+id/id_sht_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/id_sht_image"
+            android:text="火爆预售"
+            android:textColor="@color/text_420100"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+</LinearLayout>

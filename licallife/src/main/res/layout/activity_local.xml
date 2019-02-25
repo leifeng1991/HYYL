@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/horizontallLine" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/id_location_mapview"
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="10dp">
+
+            <EditText
+                android:id="@+id/id_location_search"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:hint="搜索附近的写字楼、小区、学校等"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="35dp"
+                android:textSize="@dimen/text_size_13"
+                android:inputType="text"
+                android:textColorHint="@color/text_b5" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/search_icon" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/id_location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/location_image"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="7dp"
+            android:paddingBottom="7dp"/>
+    </RelativeLayout>
+
+    <com.xxzlkj.shop.weight.xlistview.XListView
+        android:id="@+id/id_location_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+</LinearLayout>

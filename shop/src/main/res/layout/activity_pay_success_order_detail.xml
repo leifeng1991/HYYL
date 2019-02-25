@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:background="@mipmap/no_delivery_bg">
+
+                <ImageView
+                    android:id="@+id/id_psod_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18dp"
+                    android:src="@mipmap/no_delivery_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/id_psod_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_psod_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="等待卖家发货"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_17" />
+
+                    <TextView
+                        android:id="@+id/id_psod_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="您的包裹正在整装待发"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_psod_receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_222833"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View style="@style/horizontallLine" />
+
+                <TextView
+                    android:id="@+id/id_psod_adresss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="@color/text_222833"
+                    android:textSize="@dimen/text_size_15" />
+
+                <View style="@style/horizontallLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/id_psod_pay_logo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/pay_zhifubao" />
+
+                    <TextView
+                        android:id="@+id/id_psod_pay_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#606367"
+                        android:textSize="@dimen/text_size_15" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/id_psod_pay_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/text_size_15" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/id_psod_check_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_black_stroke_a1"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="查看订单"
+                        android:textColor="@color/text_a1"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <TextView
+                        android:id="@+id/id_psod_back_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:background="@drawable/shape_orange_stroke_35"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="10dp"
+                        android:text="返回首页"
+                        android:textColor="@color/text_price"
+                        android:textSize="@dimen/text_size_13" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/lineHorizontal5dp" />
+
+            <TextView
+                android:id="@+id/id_psod_state_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="15dp"
+                android:text="您已成功下单，我们会尽快为您安排配送。"
+                android:textColor="#FF1B1B"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                style="@style/horizontallLine"
+                android:layout_marginLeft="24dp" />
+
+            <TextView
+                android:id="@+id/id_psod_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="15dp"
+                android:text="提醒会员注意：
+我们不会以任何理由要求您提供银行卡、支付宝等信
+息，谨防诈骗。"
+                android:textColor="#868A90"
+                android:textSize="@dimen/text_size_14" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="@color/line_f126"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/line_b7" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:text="为你推荐"
+                    android:textColor="@color/text_b6"
+                    android:textSize="@dimen/text_size_13" />
+
+                <View
+                    style="@style/horizontallLine"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/line_b7" />
+            </LinearLayout>
+
+            <com.xxzlkj.shop.weight.CustomRecyclerView
+                android:id="@+id/id_sc_recommend_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

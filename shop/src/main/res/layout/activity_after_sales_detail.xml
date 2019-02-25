@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg_zhaolin"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/horizontallLine" />
+
+    <com.xxzlkj.shop.weight.HeaderRecyclerView
+        android:id="@+id/id_asd_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/backgroud_f2">
+
+        <TextView
+            android:id="@+id/id_asd_order_detail"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/shape_buy_now"
+            android:gravity="center"
+            android:text="订单详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+</LinearLayout>

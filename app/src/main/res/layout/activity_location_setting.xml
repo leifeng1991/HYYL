@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F6F8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e7e7e7"/>
+
+    <TextView
+        android:id="@+id/id_electronic_fence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="17dp"
+        android:text="电子围栏"
+        android:textColor="#FF444444"
+        android:textSize="@dimen/text_size_17" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E4E4E4"
+        android:paddingBottom="8dp"
+        android:paddingLeft="17dp"
+        android:paddingTop="8dp"
+        android:text="定位记录"
+        android:textColor="#FF777777"
+        android:textSize="@dimen/text_size_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间"
+            android:textColor="#FF484848"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:hint="请输入开始时间"
+            android:singleLine="true"
+            android:textColor="#FF484848"
+            android:textColorHint="#FFC0C0C0"
+            android:textSize="@dimen/text_size_17" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="#E4E4E4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束时间"
+            android:textColor="#FF484848"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_stop_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:hint="请选择结束时间"
+            android:singleLine="true"
+            android:textColor="#FF484848"
+            android:textColorHint="#FFC0C0C0"
+            android:textSize="@dimen/text_size_17" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:background="#E4E4E4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位更新"
+            android:textColor="#FF484848"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_update_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:hint="请选择定位数据更新频率"
+            android:singleLine="true"
+            android:textColor="#FF484848"
+            android:textColorHint="#FFC0C0C0"
+            android:textSize="@dimen/text_size_17" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_delete_all_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:padding="17dp"
+        android:text="删除所有位置记录"
+        android:textColor="#FF444444"
+        android:textSize="@dimen/text_size_17" />
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/id_sli_top_line"
+        style="@style/horizontallLine"
+        android:layout_height="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+        <CheckBox
+            android:id="@+id/id_scl_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:background="@null"
+            android:button="@drawable/selector_checked_bg"
+            android:focusable="false" />
+
+        <ImageView
+            android:id="@+id/id_scl_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/id_scl_cb"
+            android:src="@mipmap/sc_zholin" />
+
+        <TextView
+            android:id="@+id/id_scl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/id_scl_image"
+            android:text="兆邻自营"
+            android:textColor="@color/text_04"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="15dp" />
+
+    <ListView
+        android:id="@+id/id_scl_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>

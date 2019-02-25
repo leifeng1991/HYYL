@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_style_5_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+
+        <ImageView
+            android:id="@+id/id_fire_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#b3ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/id_fire_layout"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/id_fire_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_6"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_fire_guige"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_9c"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_fire_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/id_fire_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_price"
+                    android:textSize="@dimen/text_size_22" />
+
+                <TextView
+                    android:id="@+id/id_fire_prices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/id_fire_price"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/id_fire_price"
+                    android:textColor="@color/text_7"
+                    android:textSize="@dimen/text_size_13" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:paddingLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/id_fire_hour"
+                style="@style/timerText"
+                android:text="12" />
+
+            <TextView
+                style="@style/timeText"
+                android:text="时" />
+
+            <TextView
+                android:id="@+id/id_fire_minute"
+                style="@style/timerText"
+                android:text="12" />
+
+            <TextView
+                style="@style/timeText"
+                android:text="分" />
+
+            <TextView
+                android:id="@+id/id_fire_senconds"
+                style="@style/timerText"
+                android:text="12" />
+
+            <TextView
+                style="@style/timeText"
+                android:text="秒" />
+
+            <TextView
+                android:id="@+id/id_fire_millisencond"
+                style="@style/timerText"
+                android:background="@drawable/shape_orange_corners"
+                android:text="12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_fire_buy_now"
+            android:layout_width="77dp"
+            android:layout_height="27dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_buy_now"
+            android:gravity="center"
+            android:text="去抢购"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/id_fli_line"
+        style="@style/line_5dp" />
+</LinearLayout>

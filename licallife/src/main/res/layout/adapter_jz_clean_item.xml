@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_jpt_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="11.5dp">
+
+        <ImageView
+            android:id="@+id/id_jci_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="9dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/id_jci_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_222833"
+                    android:textSize="@dimen/text_size_14"
+                    android:singleLine="true"/>
+
+                <com.xxzlkj.licallife.weight.RatingBar
+                    android:id="@+id/id_jci_rb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srb_starSize="10dp"
+                    app:srb_numberOfStars="5"
+                    app:srb_rating="3"
+                    app:srb_borderColor="@color/text_price"
+                    app:srb_fillColor="@color/text_price"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/id_jci_name"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:id="@+id/id_jci_satisfaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_746f6e"
+                    android:textSize="@dimen/text_size_11" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/id_jci_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_746f6e"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/id_jci_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_746f6e"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_12" />
+
+            <LinearLayout
+                android:id="@+id/id_lable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/id_lable_first"
+                    android:layout_width="54dp"
+                    android:layout_height="19dp"
+                    android:background="@drawable/shape_orange_stroke"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_price"
+                    android:textSize="@dimen/text_size_10" />
+
+                <TextView
+                    android:id="@+id/id_lable_second"
+                    android:layout_width="54dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="9dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/shape_orange_stroke"
+                    android:gravity="center"
+                    android:textColor="@color/text_price"
+                    android:textSize="@dimen/text_size_10" />
+                <TextView
+                    android:id="@+id/id_lable_third"
+                    android:layout_width="54dp"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="9dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:background="@drawable/shape_orange_stroke"
+                    android:gravity="center"
+                    android:textColor="@color/text_price"
+                    android:textSize="@dimen/text_size_10" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp" />
+</LinearLayout>

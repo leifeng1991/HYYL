@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/id_day"
+        android:layout_width="31dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="今天"
+        android:textColor="@color/text_746f6e"
+        android:textSize="@dimen/text_size_11" />
+
+    <LinearLayout
+        android:id="@+id/id_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"/>
+
+  <!--  <TextView
+        android:id="@+id/id_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"/>-->
+</LinearLayout>

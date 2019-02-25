@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="17dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingRight="17dp"
+        android:paddingTop="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/id_message_image"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_centerVertical="true" />
+
+        <com.xxzlkj.huayiyanglao.weight.ShapeButton
+            android:id="@+id/id_unread_message"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_alignRight="@+id/id_message_image"
+            android:visibility="gone"
+            app:fb_borderColor="@color/red"
+            app:fb_defaultColor="@color/red"
+            app:fb_radius="8dp"
+            app:fb_text=""
+            app:fb_textSize="11sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_toLeftOf="@+id/id_time"
+            android:layout_toRightOf="@+id/id_message_image">
+
+            <TextView
+                android:id="@+id/id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="- -"
+                android:textColor="#FF444444"
+                android:textSize="16sp" />
+
+            <com.xxzlkj.huayiyanglao.weight.ShapeButton
+                android:id="@+id/id_red_circle"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/id_title"
+                android:visibility="gone"
+                app:fb_borderColor="@color/red"
+                app:fb_defaultColor="@color/red"
+                app:fb_radius="8dp"
+                app:fb_text="" />
+
+            <TextView
+                android:id="@+id/id_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_title"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="- -"
+                android:textColor="#FFB4B4B4"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:text="- -"
+            android:textColor="#FFB4B4B4"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/HorizontalHalvingLine_1" />
+</LinearLayout>

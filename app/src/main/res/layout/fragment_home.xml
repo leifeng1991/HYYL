@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smartRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                app:elevation="0dp">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="66dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                    app:titleEnabled="false">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/id_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="184dp"
+                        app:layout_collapseMode="parallax" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:gravity="bottom"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="pin">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/toolbar_height"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="4dp"
+                                android:gravity="center_vertical"
+                                android:maxWidth="250dp"
+                                android:paddingLeft="18dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black_444444"
+                                android:textSize="@dimen/text_size_12"
+                                android:textStyle="bold" />
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:id="@+id/id_home_ll_search"
+                                    android:layout_width="27dp"
+                                    android:layout_height="27dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="13dp"
+                                    android:layout_toLeftOf="@+id/id_home_image"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_home_search"
+                                        android:layout_width="27dp"
+                                        android:layout_height="27dp"
+                                        android:src="@mipmap/ic_sousuo" />
+
+                                    <EditText
+                                        android:id="@+id/id_search"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@null"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/id_home_image"
+                                    android:layout_width="27dp"
+                                    android:layout_height="27dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="17dp"
+                                    android:src="@mipmap/ic_yuyin" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp" />
+
+            </android.support.design.widget.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f1f2f6"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:id="@+id/vg_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_title_recycler_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="220" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_content_recycler_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="510" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vg_location_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:layout_gravity="center"
+                        android:background="@color/white_f1f2f6"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_loaction_no" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="获取定位失败，无法查看～"
+                            android:textColor="@color/black_888888"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/tv_location_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/shape_rectangle_no_data"
+                                android:gravity="center"
+                                android:text="手动定位"
+                                android:textColor="@color/orange_ff725c"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tv_setting_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/shape_rectangle_no_data"
+                                android:gravity="center"
+                                android:text="设置定位"
+                                android:textColor="@color/orange_ff725c"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="12dp"
+                        android:text="已开通小区"
+                        android:textColor="@color/red_FF002B"
+                        android:textSize="13sp" />
+
+                    <View
+                        style="@style/lineHorizontalOrder"
+                        android:background="@color/gray_dfdfdf" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_opened_house"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_shade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

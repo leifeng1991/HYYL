@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/id_hii_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:id="@+id/id_coverage_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:id="@+id/id_hii_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@id/id_hii_image"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/text_6"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_hii_norms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_hii_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/id_hii_image"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_9c"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_hii_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_hii_norms"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/id_hii_image"
+            android:singleLine="true"
+            android:textColor="@color/tabIndicatorColor"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_hii_price_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/id_hii_price"
+            android:layout_below="@id/id_hii_norms"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/id_hii_bn"
+            android:layout_toRightOf="@id/id_hii_price"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/text_ac"
+            android:textSize="@dimen/text_size_10"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_hii_bn"
+            android:layout_width="77dp"
+            android:layout_height="27dp"
+            android:layout_alignBottom="@id/id_hii_price"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_buy_now"
+            android:gravity="center"
+            android:text="去抢购"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+
+        <com.xxzlkj.shop.weight.CustomButton
+            android:id="@+id/id_yushou_btn"
+            android:layout_width="40dp"
+            android:layout_height="18dp"
+            android:layout_alignBottom="@id/id_hii_price"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            app:fb_defaultColor="@color/text_price"
+            app:fb_radius="9dp"
+            app:fb_text="预售"
+            app:fb_textColor="@color/white"
+            app:fb_textSize="@dimen/text_size_11" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/line_1px"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_equipment_home" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:id="@+id/id_health_data"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_health_data"
+                    android:gravity="center"
+                    android:text="健康数据"
+                    android:textColor="#FF888888"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_dwjl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_equipment_dwjl"
+                    android:gravity="center"
+                    android:text="定位记录"
+                    android:textColor="#FF888888"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_bhsz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_equipment_bhsz"
+                    android:gravity="center"
+                    android:text="拨号设置"
+                    android:textColor="#FF888888"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/id_device_management"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@mipmap/ic_device_management"
+                    android:gravity="center"
+                    android:text="设备管理"
+                    android:textColor="#FF888888"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View style="@style/HorizontalHalvingLine_5dp" />
+
+            <include layout="@layout/layout_tijianjilu" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

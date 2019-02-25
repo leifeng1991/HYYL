@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <View style="@style/lineHorizontalE8E8E8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/shape_rectangle_feedback_bg"
+            android:gravity="top"
+            android:hint="请输入您对华颐的建议..."
+            android:padding="15dp"
+            android:textColor="@color/white_c3c3c3"
+            android:textColorHint="@color/white_c3c3c3"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/blue_54B1F8"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:text="提  交"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

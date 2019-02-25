@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/id_gd_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/local_life_home_bottom">
+                <!--height 375-->
+                <ImageView
+                    android:id="@+id/id_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/id_first_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="18dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="18dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/id_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:textColor="@color/text_222833"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <com.xxzlkj.licallife.weight.RatingBar
+                                    android:id="@+id/id_star"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@id/id_name"
+                                    android:clickable="false"
+                                    app:srb_borderColor="@color/text_price"
+                                    app:srb_fillColor="@color/text_price"
+                                    app:srb_numberOfStars="5"
+                                    app:srb_rating="3"
+                                    app:srb_starSize="10dp" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/id_service_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/text_746f6e"
+                                android:textSize="@dimen/text_size_12" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <com.xxzlkj.shop.weight.CustomButton
+                                    android:id="@+id/id_lable_first"
+                                    android:layout_width="54dp"
+                                    android:layout_height="19dp"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:visibility="gone"
+                                    app:fb_borderColor="@color/text_price"
+                                    app:fb_borderWidth="1px"
+                                    app:fb_defaultColor="@color/white"
+                                    app:fb_ghost="true"
+                                    app:fb_radius="27dp"
+                                    app:fb_textColor="@color/text_price"
+                                    app:fb_textSize="@dimen/text_size_10" />
+
+                                <com.xxzlkj.shop.weight.CustomButton
+                                    android:id="@+id/id_lable_second"
+                                    android:layout_width="54dp"
+                                    android:layout_height="19dp"
+                                    android:layout_marginLeft="9dp"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:visibility="gone"
+                                    app:fb_borderColor="@color/text_yellow"
+                                    app:fb_borderWidth="1px"
+                                    app:fb_defaultColor="@color/white"
+                                    app:fb_ghost="true"
+                                    app:fb_radius="27dp"
+                                    app:fb_textColor="@color/text_yellow"
+                                    app:fb_textSize="@dimen/text_size_10" />
+
+                                <com.xxzlkj.shop.weight.CustomButton
+                                    android:id="@+id/id_lable_third"
+                                    android:layout_width="54dp"
+                                    android:layout_height="19dp"
+                                    android:layout_marginLeft="9dp"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:visibility="gone"
+                                    app:fb_borderColor="@color/text_price"
+                                    app:fb_borderWidth="1px"
+                                    app:fb_defaultColor="@color/white"
+                                    app:fb_ghost="true"
+                                    app:fb_radius="27dp"
+                                    app:fb_textColor="@color/text_price"
+                                    app:fb_textSize="@dimen/text_size_10" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View style="@style/verticalLine" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/id_order_quantity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_75706F"
+                                    android:textSize="@dimen/text_size_12" />
+
+                                <TextView
+                                    android:id="@+id/id_satisfaction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/text_75706F"
+                                    android:textSize="@dimen/text_size_12" />
+
+                                <TextView
+                                    android:id="@+id/id_saturation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/text_75706F"
+                                    android:textSize="@dimen/text_size_12" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/line_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/id_second_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="18dp">
+
+                        <TextView
+                            android:id="@+id/id_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_price"
+                            android:textSize="@dimen/text_size_20" />
+
+                        <com.xxzlkj.shop.weight.CustomButton
+                            android:id="@+id/id_now"
+                            android:layout_width="75dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            app:fb_defaultColor="@color/text_price"
+                            app:fb_radius="25dp"
+                            app:fb_text="立即预约"
+                            app:fb_textColor="#ffffff"
+                            app:fb_textGravity="center"
+                            app:fb_textSize="@dimen/text_size_12" />
+
+                        <com.xxzlkj.shop.weight.CustomButton
+                            android:id="@+id/id_phone"
+                            android:layout_width="75dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/id_now"
+                            app:fb_defaultColor="#ffbf00"
+                            app:fb_iconPaddingRight="5dp"
+                            app:fb_iconPosition="left"
+                            app:fb_iconResource="@mipmap/white_phone_icon"
+                            app:fb_radius="25dp"
+                            app:fb_text="电话"
+                            app:fb_textColor="#ffffff"
+                            app:fb_textGravity="center"
+                            app:fb_textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:id="@+id/id_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/id_price"
+                            android:layout_marginTop="10dp"
+                            android:text="本活动只适用于日常保洁，不含深度保洁、家电清洗和洗护"
+                            android:textColor="@color/text_746f6e"
+                            android:textSize="@dimen/text_size_12"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <View style="@style/line_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/view_about_time_layout" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/id_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:text="耗时参考"
+                            android:textColor="@color/text_222833"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <LinearLayout
+                            android:id="@+id/id_table_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View style="@style/horizontallLine" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/id_skills_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="今日可约、打扫卫生、会做饭、五星大厨、照看老人、会做家务、接送孩子"
+                            android:textColor="@color/text_9"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View style="@style/line_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_detail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View style="@style/line_5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_merchant_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="服务提供商"
+                        android:textColor="@color/text_222833"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View style="@style/horizontallLine" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:id="@+id/id_merchant_image"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="7.5dp"
+                            android:layout_toRightOf="@id/id_merchant_image"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/id_merchant_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="云家政"
+                                android:textColor="@color/text_222833"
+                                android:textSize="@dimen/text_size_14" />
+
+                            <TextView
+                                android:id="@+id/id_merchant_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="30万资质阿姨，两小时极速上门"
+                                android:textColor="@color/text_746f6e"
+                                android:textSize="@dimen/text_size_12" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/local_life_home_bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_f2f2f2"
+            android:gravity="center|right"
+            android:visibility="invisible">
+
+            <com.xxzlkj.shop.weight.CustomButton
+                android:id="@+id/id_bottom_phone"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/id_now"
+                app:fb_defaultColor="#ffbf00"
+                app:fb_iconPaddingRight="5dp"
+                app:fb_iconPosition="left"
+                app:fb_iconResource="@mipmap/white_phone_icon"
+                app:fb_radius="25dp"
+                app:fb_text="电话"
+                app:fb_textColor="#ffffff"
+                app:fb_textGravity="center"
+                app:fb_textSize="@dimen/text_size_12" />
+
+            <com.xxzlkj.shop.weight.CustomButton
+                android:id="@+id/id_bottom_now"
+                android:layout_width="75dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                app:fb_defaultColor="@color/text_price"
+                app:fb_radius="25dp"
+                app:fb_text="立即预约"
+                app:fb_textColor="#ffffff"
+                app:fb_textGravity="center"
+                app:fb_textSize="@dimen/text_size_12" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/horizontallLine" />
+
+</LinearLayout>
+

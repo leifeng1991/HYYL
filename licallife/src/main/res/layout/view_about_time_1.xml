@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="31dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="bottom">
+
+    <TextView
+        android:id="@+id/id_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="时段"
+        android:textColor="@color/text_746f6e"
+        android:textSize="@dimen/text_size_11" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:background="#d4d4d4"
+        android:visibility="invisible"/>
+
+    <View style="@style/horizontallLine" />
+</LinearLayout>

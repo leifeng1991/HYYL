@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/id_device_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="设备手机号"
+                android:textColor="#FF444444"
+                android:textSize="@dimen/text_size_16" />
+
+            <View style="@style/HorizontalHalvingLine_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/ic_capacity" />
+
+                <TextView
+                    android:id="@+id/id_device_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="13412345678"
+                    android:textColor="#FF444444"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_no_bind_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您尚未绑定设备"
+                android:textColor="#FF444444"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_text"
+                android:text="绑定后可设置快捷拨号和紧急通知"
+                android:textColor="#FF999999"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_right_arrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_pupillus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="被监护人"
+            android:textColor="#FF444444"
+            android:textSize="@dimen/text_size_17"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/id_speed_dial_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#FFF1F2F6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/id_speed_dial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快捷拨号"
+                    android:textColor="#FF444444"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/id_speed_dial"
+                    android:text="（最多4个）"
+                    android:textColor="#FF999999"
+                    android:textSize="@dimen/text_size_13" />
+
+                <com.xxzlkj.shop.weight.CustomButton
+                    android:id="@+id/id_speed_dial_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    app:fb_borderColor="#979797"
+                    app:fb_borderWidth="1px"
+                    app:fb_defaultColor="@color/white"
+                    app:fb_radius="4dp"
+                    app:fb_text="添加"
+                    app:fb_textColor="#FF505050"
+                    app:fb_textSize="@dimen/text_size_15" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/id_speed_dial_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_unread_message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#FFF1F2F6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/id_urgent_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="紧急通知"
+                    android:textColor="#FF444444"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/id_urgent_message"
+                    android:text="（最多3个）"
+                    android:textColor="#FF999999"
+                    android:textSize="@dimen/text_size_13" />
+
+                <com.xxzlkj.shop.weight.CustomButton
+                    android:id="@+id/id_urgent_message_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    app:fb_borderColor="#979797"
+                    app:fb_borderWidth="1px"
+                    app:fb_defaultColor="@color/white"
+                    app:fb_radius="4dp"
+                    app:fb_text="添加"
+                    app:fb_textColor="#FF505050"
+                    app:fb_textSize="@dimen/text_size_15" />
+            </RelativeLayout>
+
+            <View style="@style/HorizontalHalvingLine_1" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/id_urgent_message_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_monitoring_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#FFF1F2F6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/id_monitoring_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="监护号码"
+                    android:textColor="#FF444444"
+                    android:textSize="@dimen/text_size_16" />
+
+                <com.xxzlkj.shop.weight.CustomButton
+                    android:id="@+id/id_monitoring_btn"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    app:fb_borderColor="#979797"
+                    app:fb_borderWidth="1px"
+                    app:fb_defaultColor="@color/white"
+                    app:fb_radius="4dp"
+                    app:fb_text="添加"
+                    app:fb_textColor="#FF505050"
+                    app:fb_textSize="@dimen/text_size_15" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

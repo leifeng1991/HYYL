@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/id_image"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="6dp">
+
+        <TextView
+            android:id="@+id/id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:singleLine="true"
+            android:text="黄桃礼盒套装  2斤装"
+            android:textColor="@color/text_b4"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/id_user_avatar"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@mipmap/default_icon2" />
+
+            <TextView
+                android:id="@+id/id_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/id_open_mass_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="¥ 63.80"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_tuan_people"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:text="差1人·5人团"
+                android:textColor="#FF969696"
+                android:textSize="@dimen/text_size_10" />
+
+            <com.xxzlkj.shop.weight.CustomButton
+                android:id="@+id/id_offered"
+                fb_defaultColor="#FF725C"
+                android:layout_width="40dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="10dp"
+                app:fb_defaultColor="#FF725C"
+                app:fb_radius="9dp"
+                app:fb_text="参团"
+                app:fb_textColor="#FFFFFFFF"
+                app:fb_textSize="@dimen/text_size_11" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

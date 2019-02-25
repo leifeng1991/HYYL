@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_f1f2f6"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/id_rli_user_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_8"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/id_rli_user_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/text_8"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_rli_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/id_rli_layout_1"
+            style="@style/tuiLl2">
+
+            <TextView
+                android:id="@+id/id_layout_1_state"
+                style="@style/tuiText3" />
+
+            <TextView
+                android:id="@+id/id_layout_1_tip"
+                style="@style/tuiText4" />
+
+            <LinearLayout
+                android:id="@+id/id_layout_1_content"
+                style="@style/tuiLl4">
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="退款类型：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_1_type"
+                        style="@style/tuiText2"
+                        android:text="退款类型：" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="退款原因：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_1_reason"
+                        style="@style/tuiText2"
+                        android:text="退款类型：" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="退款金额：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_1_money"
+                        style="@style/tuiText2"
+                        android:text="退款类型：" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="退款说明：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_1_introduction"
+                        style="@style/tuiText2"
+                        android:text="退款类型：" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_layout_1_images"
+                    style="@style/tuiLl"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="照片凭证：" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_rli_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:layout_marginTop="5dp">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="申请时间：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_1_time"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/id_layout_1_updata"
+                        style="@style/tuiText6"
+                        android:text="修改申请" />
+
+                    <TextView
+                        android:id="@+id/id_layout_1_cancel"
+                        style="@style/tuiText5"
+                        android:layout_toLeftOf="@id/id_layout_1_updata"
+                        android:text="撤销申请" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_rli_layout_2"
+            style="@style/tuiLl2">
+
+            <TextView
+                android:id="@+id/id_layout_2_state"
+                style="@style/tuiText3" />
+
+            <TextView
+                android:id="@+id/id_layout_2_tip"
+                style="@style/tuiText4" />
+
+            <LinearLayout
+                android:id="@+id/id_layout_2_content"
+                style="@style/tuiLl4">
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        android:id="@+id/id_layout_2_address"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="收件人：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_2_peple"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl3">
+
+                    <TextView
+                        android:id="@+id/id_layout_2_time"
+                        style="@style/tuiText1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/id_layout_2_cancel"
+                    style="@style/tuiText6"
+                    android:background="@drawable/shape_orange_stroke"
+                    android:text="撤销申请" />
+
+                <TextView
+                    android:id="@+id/id_layout_2_updata"
+                    style="@style/tuiText5"
+                    android:layout_toLeftOf="@id/id_layout_2_cancel"
+                    android:text="退货方式" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_rli_layout_3"
+            style="@style/tuiLl2">
+
+            <TextView
+                android:id="@+id/id_layout_3_state"
+                style="@style/tuiText3" />
+
+            <TextView
+                android:id="@+id/id_layout_3_tip"
+                style="@style/tuiText4" />
+
+            <LinearLayout
+                android:id="@+id/id_layout_3_content"
+                style="@style/tuiLl4">
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        android:id="@+id/id_layout_3_type"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        android:id="@+id/id_layout_3_time_store"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        style="@style/tuiText1"
+                        android:text="备注：" />
+
+                    <TextView
+                        android:id="@+id/id_layout_3_note"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl3">
+
+                    <TextView
+                        android:id="@+id/id_layout_3_time"
+                        style="@style/tuiText1" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_rli_layout_5"
+            style="@style/tuiLl2">
+
+            <TextView
+                android:id="@+id/id_layout_5_state"
+                style="@style/tuiText3" />
+
+            <LinearLayout
+                android:id="@+id/id_layout_5_contents"
+                style="@style/tuiLl4"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout style="@style/tuiLl">
+
+                    <TextView
+                        android:id="@+id/id_layout_5_content"
+                        style="@style/tuiText2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/tuiLl3">
+
+                    <TextView
+                        android:id="@+id/id_layout_5_time"
+                        style="@style/tuiText1" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

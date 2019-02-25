@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/id_jali_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/id_jali_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/id_jali_state"
+            android:layout_toRightOf="@id/id_jali_image"
+            android:textColor="@color/text_222833"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_jali_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="20dp"
+            android:text="已完成"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/id_jali_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_jali_title"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/id_jali_image"
+            android:textColor="@color/gray_746f6e"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/id_jali_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_jali_time"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/id_jali_image"
+            android:textColor="@color/gray_746f6e"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/id_jali_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_jali_hours"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/id_jali_image"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/id_jali_apply"
+            android:layout_width="75dp"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@id/id_jali_price"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/id_jali_time"
+            android:layout_marginRight="19dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_orange_stroke"
+            android:gravity="center"
+            android:text="申请售后"
+            android:textColor="@color/text_price"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontallLine"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
